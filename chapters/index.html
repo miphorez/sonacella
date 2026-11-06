@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Split an MP3 into tracks · Sonacella</title>
+<style>
+:root{color-scheme:dark;--bg:#111a15;--panel:#1a261e;--ink:#f4f0e5;--quiet:#c0ccbf;--green:#b9d8b0;--gold:#edcf91;--line:#405146;font:16px/1.55 system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink)}main{max-width:1030px;margin:auto;padding:28px 20px 60px}h1,h2,h3,p,figure{margin:0}h1,h2{font:400 clamp(28px,5vw,48px)/1.07 Georgia,serif}p+p{margin-top:12px}a{color:var(--green);text-underline-offset:4px}
+.brand{display:block;color:var(--green);font:30px/1 Georgia,serif;text-shadow:0 0 9px #7ded5080}.brand small{display:block;font:italic 13px/1.5 Georgia,serif;text-shadow:none}
+.entry{padding:32px 0 26px;border-bottom:1px solid var(--line)}.entry p,.guide-head p{margin-top:12px;max-width:68ch;color:var(--quiet)}.kicker{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.actions,.variants{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.action,button{background:var(--panel);border:1px solid var(--line);border-radius:7px;color:var(--ink);font:inherit;padding:7px 12px;cursor:pointer;text-decoration:none}.action:hover,button:hover{border-color:var(--green)}button[aria-pressed=true],.primary{background:var(--gold);color:var(--bg);border-color:var(--gold)}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.guide{margin-top:28px}.guide-head h2{margin-top:6px}.variants button{font-size:14px}.note{min-height:2em;margin-top:10px;color:var(--quiet);font-size:14px}
+.map{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,330px);gap:clamp(36px,8vw,96px);position:relative;align-items:center;padding:16px 0 24px}.input{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;position:relative}.input h3{font-size:16px;margin-bottom:8px}.input p{font-size:13px;color:var(--quiet)}.file{background:#101913;border-radius:8px;padding:12px;margin:12px 0;font:14px/1.8 Consolas,monospace;overflow-wrap:anywhere}.file b{color:var(--gold)}.file em{font-style:normal;color:var(--green)}
+.copy{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.copy button,.copy a{font-size:13px}.markers{margin-top:13px;display:grid;gap:7px}.field{font-size:13px;text-align:left;position:relative;background:#101913;min-width:0}.field code{white-space:normal;overflow-wrap:anywhere}.field[aria-pressed=true]{background:#283429;color:var(--ink);border-color:var(--gold)}.field span{color:var(--gold);margin-right:6px;font-weight:bold}
+.shot{position:relative;max-width:330px;margin:auto;width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden}.shot img{display:block;width:100%;height:auto}.mark{position:absolute;top:var(--y);left:var(--x);transform:translate(-50%,-50%);border-radius:50%;width:25px;height:25px;background:var(--gold);color:var(--bg);display:grid;place-items:center;font-size:12px;font-weight:750;border:1px solid #111a15;z-index:2}.mark.active{box-shadow:0 0 0 5px #edcf9180}.caption{font-size:13px;color:var(--quiet);min-height:3.4em}
+.lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1}.lines path{fill:none;stroke:var(--green);stroke-width:1.4;opacity:.64}.lines path.active{stroke:var(--gold);stroke-width:2.4;opacity:1}.lines marker path{fill:var(--green);stroke:none}.map:not([data-mode=arrows]) .lines{display:none}.map[data-mode=steps]{max-width:540px;grid-template-columns:1fr;gap:18px;margin:auto}.map[data-mode=steps] .input::after{content:"↓";position:absolute;left:50%;bottom:-22px;color:var(--gold)}
+.guide-link{display:inline-block;margin-top:20px}.close{float:right}dialog{width:min(96%,1000px);max-height:90dvh;overflow:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:15px;padding:18px 24px}dialog::backdrop{background:#020905c4}dialog .guide{margin-top:8px}
+.guide-link[hidden]{display:none}.file div:last-child{position:relative}.map[data-mode=arrows] .file div:last-child::after{content:"}";position:absolute;right:-21px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:32px}
+@media(max-width:720px){.map{grid-template-columns:1fr;gap:17px}.lines{display:none}dialog{padding:14px}.note{min-height:0}}
+@media(max-width:720px){.map[data-mode=arrows] .file div:last-child::after{display:none}}
+
+main{max-width:1050px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:18px}.masthead a{font-size:14px}.guide-intro{padding:36px 0 25px;border-bottom:1px solid var(--line)}.guide-intro h1{margin:7px 0 13px}.guide-intro p,.prose{max-width:72ch;color:var(--quiet)}.guide-section{padding:26px 0;border-bottom:1px solid var(--line)}.guide-section h2{font-size:clamp(26px,4vw,36px);margin-bottom:12px}.template{max-width:660px;margin-top:16px}.template .file{margin-top:0}.steps-list{padding-left:25px;max-width:72ch;color:var(--quiet)}.steps-list li{padding-left:5px;margin:10px 0}.steps-list strong,.prose strong{color:var(--ink)}.drive-note{margin-top:16px;padding:12px 15px;border-left:2px solid var(--green);background:var(--panel)}.mapping-hint{font-size:14px;margin-top:10px}.mobile-hint{display:none}.map{padding-bottom:12px}.figure-label{margin-bottom:10px}.field span[aria-hidden]{display:inline-block;min-width:1em}.caption{min-height:0;margin-top:12px}.optional{margin-top:18px}.optional summary{cursor:pointer;color:var(--green)}.optional p{font-size:14px;margin-top:8px;color:var(--quiet);max-width:75ch}.contents{margin-top:15px;display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+@media(max-width:720px){.desktop-hint{display:none}.mobile-hint{display:inline}.guide-intro{padding-top:25px}}
+.drive-note + .prose{margin-top:16px}
+</style>
+<main>
+  <header class="masthead">
+    <span class="brand">Sonacella<small>All your music, inside.</small></span>
+    <a href="../">← Back to Sonacella</a>
+  </header>
+  <section class="guide-intro">
+    <span class="kicker">Sonacella listening guide</span>
+    <h1>Split a long MP3 into tracks</h1>
+    <p>Turn a continuous mix, concert, or audiobook into tracks you can jump between. Give Sonacella a TXT file with the start times and it creates the track entries automatically. The original MP3 stays whole.</p>
+    <nav class="contents" aria-label="On this page"><a href="#template">TXT template</a><a href="#import">Import steps</a><a href="#track-card">Track card fields</a><a href="#worked-example">Worked example</a></nav>
+  </section>
+
+  <section class="guide-section" id="template">
+    <h2>1. Copy the TXT template</h2>
+    <div class="drive-note">
+      <h3>Example: a YouTube mix with a tracklist</h3>
+      <p class="prose">Say you find a long mix on YouTube with track times in the description. Get the MP3 of that same version from a download the artist or label offers, or from a store that sells the recording as a downloadable file. If you own the recording, you can use your original audio. YouTube Premium downloads are for offline playback within YouTube. <a href="https://support.google.com/youtube/answer/7381437?hl=en">YouTube offline download FAQ</a>.</p>
+      <p class="prose">Check the times against your MP3, since another release may have a different intro or edits. If the description lists “31:29 Easy Midnight Pulse,” enter <code>00:31:29 Easy Midnight Pulse</code> in the TXT. Save the pair as <strong>Mix.mp3</strong> and <strong>Mix.tracks.txt</strong>.</p>
+    </div>
+    <p class="prose">Use one line per track: the start time in <strong>HH:MM:SS</strong>, a space, then the track title. Use at least two start times and put them in increasing order. Replace the sample times with the points where your tracks actually start.</p>
+    <div class="template input">
+      <div class="file" id="timing-template"><div>00:00:00 Opening track</div><div><b>00:31:29</b> <em>Easy Midnight Pulse</em></div></div>
+      <div class="copy"><button class="primary" type="button" id="copy">Copy TXT</button><a href="Mix.tracks.txt" download>Download TXT</a><span id="copy-status" role="status"></span></div>
+    </div>
+    <p class="prose mapping-hint">Save as plain UTF-8 text. Use the same base name for both files, for example <strong>Mix.mp3</strong> and <strong>Mix.tracks.txt</strong>. The next start time ends the current track. The last track plays to the end of the MP3.</p>
+  </section>
+
+  <section class="guide-section" id="import">
+    <h2>2. Import the tracks</h2>
+    <ol class="steps-list">
+      <li>Switch to <strong>MP3</strong> and open the playlist where you want the tracks.</li>
+      <li>Open the three-dot menu, tap <strong>Add timing file</strong>, and select your TXT.</li>
+      <li>Tap <strong>Choose MP3</strong> to select the matching local file. For an online file, paste a direct HTTPS or shared Google Drive MP3 link and tap <strong>Check MP3</strong>.</li>
+      <li>Check the track count, then tap <strong>Add tracks</strong>. Each chapter appears as a separate playlist entry.</li>
+    </ol>
+    <p class="prose drive-note"><strong>Import a Google Drive folder.</strong> Put the matching MP3 and TXT in the same shared folder. Give anyone with the link access and allow downloads. In <strong>Playlists → Import Drive folder</strong>, paste the folder link. Sonacella creates the playlist automatically and adds chapters for MP3s with matching timing files.</p>
+  </section>
+
+  <section class="guide-section" id="track-card">
+    <h2>3. Read the track card</h2>
+    <p class="prose">Open <strong>About track</strong> from the track menu. The example below shows a chapter with optional YouTube source details.</p>
+    <p class="prose mapping-hint"><span class="desktop-hint">Follow the arrows, or select a field to highlight it on the card.</span><span class="mobile-hint">Match the numbers. Select a field to highlight its place on the card.</span></p>
+    <div class="map" id="map" data-mode="arrows">
+      <div class="input">
+        <h3>From the TXT to the card</h3>
+        <p>Example line from the template</p>
+        <div class="file" id="mapping-row"><div><b>00:31:29</b> <em>Easy Midnight Pulse</em></div></div>
+        <div class="markers" aria-label="Fields shown on the card">
+          <button class="field" type="button" data-field="title" aria-pressed="true"><span aria-hidden="true">1</span>Track title</button>
+          <button class="field" type="button" data-field="time" aria-pressed="false"><span aria-hidden="true">2</span>Starts at</button>
+          <button class="field" type="button" data-field="metadata" aria-pressed="false"><span aria-hidden="true">3</span>Recording details (optional)</button>
+          <button class="field" type="button" data-field="source" aria-pressed="false"><span aria-hidden="true">4</span>Open in YouTube (optional)</button>
+        </div>
+        <p class="caption" id="field-note" aria-live="polite">The text after the timestamp becomes the title at the top of the card.</p>
+      </div>
+      <figure>
+        <div class="shot" id="card-shot">
+          <img src="../assets/source-card.png" width="1080" height="1920" alt="Sonacella track card for Easy Midnight Pulse, showing a start time of 00:31:29 and optional YouTube source information">
+          <span class="mark active" data-mark="title" style="--x:18%;--y:18%" aria-hidden="true">1</span>
+          <span class="mark" data-mark="time" style="--x:18%;--y:56%" aria-hidden="true">2</span>
+          <span class="mark" data-mark="metadata" style="--x:18%;--y:42%" aria-hidden="true">3</span>
+          <span class="mark" data-mark="source" style="--x:51%;--y:75.3%" aria-hidden="true">4</span>
+        </div>
+      </figure>
+      <svg class="lines" aria-hidden="true"><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z"/></marker></defs></svg>
+    </div>
+    <details class="optional">
+      <summary>How optional source details work</summary>
+      <p>A <code>Source:</code> line with a valid YouTube video URL goes above the timestamps. It links the card to the original video at the chapter start. The MP3 still supplies the audio.</p>
+      <p>An optional <code>YouTube metadata:</code> line above the timestamps can add the recording title, channel, description, and artwork. It uses one line of JSON, and its video ID must match the source URL. You can leave both header lines out of the basic TXT template.</p>
+    </details>
+  </section>
+  <section class="guide-section" id="worked-example">
+    <h2>4. Build the card from a real timing file</h2>
+    <p class="prose">The card above shows <strong>Easy Midnight Pulse</strong>, a chapter in a JazzAyo Lounge mix. Compare the excerpt with the <a href="https://docs.google.com/document/d/1b_L4zRaU4hiCReZapKJaba74sWCScn0PNnSi71SBMg0">original timing file in Google Docs</a>. This shorter header keeps the full recording title, channel, and artwork. The original also includes a longer description.</p>
+    <div class="template input">
+      <pre class="file" id="worked-template" style="white-space:pre-wrap">Source: https://www.youtube.com/watch?v=S0ZZnHp1DM4
+YouTube metadata: {"version":1,"videoId":"S0ZZnHp1DM4","title":"Midnight Sax Lounge Jazz 🌙 After Dark Music for Relaxed Nights, Smooth Hours &amp; Easy Vibes","channelTitle":"JazzAyo Lounge","thumbnailUrl":"https://i.ytimg.com/vi/S0ZZnHp1DM4/maxresdefault.jpg"}
+
+00:27:51  Relaxed Evening Flow
+00:31:29  Easy Midnight Pulse
+00:35:31  Calm Sax Passage</pre>
+      <div class="copy"><button class="primary" type="button" id="copy-worked">Copy excerpt</button><a href="Midnight%20Sax%20Lounge%20Jazz.tracks.txt" download>Download all 28 timings with metadata</a><span id="worked-copy-status" role="status"></span></div>
+    </div>
+    <ol class="steps-list">
+      <li><strong>Identify the video.</strong> Put its YouTube watch URL after <code>Source:</code>. Copy the value after <code>v=</code> into <code>videoId</code>. Both IDs must match. Set <code>version</code> to the number <code>1</code>.</li>
+      <li><strong>Copy the full title.</strong> Put the title from the YouTube page in the JSON <code>title</code> field. It appears below the artwork. The name after a timestamp is the chapter title at the top of the card.</li>
+      <li><strong>Choose the thumbnail.</strong> Set <code>thumbnailUrl</code> to the video's HTTPS image on <code>i.ytimg.com</code>. <a href="https://i.ytimg.com/vi/S0ZZnHp1DM4/maxresdefault.jpg">Open this example thumbnail</a>. For another video, replace the ID between <code>/vi/</code> and <code>/maxresdefault.jpg</code> and check that the image opens. If that size is unavailable, omit <code>thumbnailUrl</code> to use Sonacella's standard YouTube thumbnail.</li>
+      <li><strong>Save and import.</strong> Put <code>Source:</code> and <code>YouTube metadata:</code> above the timestamps. Keep the JSON on one physical line, use straight double quotes, and escape quotes and line breaks inside values. Save as UTF-8 with the same base name as your MP3. Follow <a href="#import">the import steps</a>, then open <strong>About track</strong> for <strong>Easy Midnight Pulse</strong> and check <strong>Starts at 00:31:29</strong>.</li>
+    </ol>
+    <p class="prose drive-note">Use the download for the whole mix. The excerpt begins partway through it. The TXT contains timings and source details. Playback requires an authorized MP3 of the same version.</p>
+    <details class="optional">
+      <summary>Get metadata with the official YouTube Data API</summary>
+      <p>Open <a href="https://developers.google.com/youtube/data/reference/rest/v3/videos/list">videos.list</a>. In the API Explorer or with your own API key, use <code>part=snippet</code> and the video's <code>id</code>. From <code>items[0].snippet</code>, copy <code>title</code> and <code>channelTitle</code>. Use an available <code>thumbnails.maxres.url</code> or <code>thumbnails.high.url</code> on <code>i.ytimg.com</code> for <code>thumbnailUrl</code>. Optionally add <code>description</code> as a JSON string with escaped line breaks. The manual steps above work without an API key.</p>
+    </details>
+  </section>
+</main>
+<script src="guide.js"></script>
+</html>
