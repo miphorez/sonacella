@@ -50,6 +50,8 @@ nav a:hover, .site-footer a:hover { color: var(--gold); text-decoration: underli
 h1 { margin-block: 23px; font-size: clamp(52px, 7.1vw, 105px); letter-spacing: -.065em; line-height: .93; }
 h1 em { color: var(--gold); font-weight: inherit; }
 .lede { max-width: 440px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.lede + .lede { margin-top: 12px; }
+.lede strong { color: var(--pistachio); }
 .play-button {
   display: inline-flex;
   align-items: center;
