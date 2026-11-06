@@ -22,6 +22,8 @@ a { color: inherit; }
 img { display: block; max-width: 100%; }
 .icon-definitions { position: absolute; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.instagram-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-size: 14px; text-underline-offset: 3px; }
+.instagram-link svg { flex: none; }
 h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { font-family: Georgia, serif; font-weight: 400; }
 .wrap { width: min(1184px, calc(100% - 80px)); margin-inline: auto; }
