@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn a spare Android phone into a player for internet radio, local MP3s, and music streamed from Google Drive.">
+  <meta name="theme-color" content="#111a15">
+  <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
+    <symbol id="track-skip" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M6 5.5v13l10-6.5zM17 5.5h2v13h-2z"/>
+    </symbol>
+  </svg>
+  <header class="site-header wrap">
+    <a class="brand wordmark" href="./">
+      <span class="brand-name">Sonacella</span>
+      <span class="brand-slogan">All your music, inside.</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#radio">Radio</a>
+      <a href="#mp3">MP3</a>
+      <a href="#chapters">Chapters</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="radio" aria-labelledby="intro">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A free audio player for Android</p>
+        <h1 id="intro">Old phone.<br><em>New player.</em></h1>
+        <p class="lede">Turn a spare Android phone into an easy-to-use audio player. Tune in to internet radio at home, take your MP3s on a walk, or resume an audiobook from your Google Drive right where you left off.</p>
+        <a class="play-button" href="https://play.google.com/store/apps/details?id=io.github.miphorez.sonacella">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23"><path fill="currentColor" d="M5 3.7v16.6a.7.7 0 0 0 1.1.6l13.3-8.3a.7.7 0 0 0 0-1.2L6.1 3.1a.7.7 0 0 0-1.1.6Z"/></svg>
+          Get it on Google Play
+        </a>
+        <p class="requirements">Android 8.0 and up</p>
+      </div>
+      <figure class="radio-figure gallery" data-gallery aria-label="Internet radio screenshots">
+        <div class="gallery-slides">
+          <a class="screen is-current" href="assets/radio.png" data-caption="Station list">
+            <img src="assets/radio.png" width="1080" height="1920" alt="Sonacella playing SmoothJazz.com Global with the saved station list above the controls">
+          </a>
+          <a class="screen" href="assets/station-card.png" data-caption="Station card" inert>
+            <img src="assets/station-card.png" width="1080" height="1920" alt="A station card showing information about a radio station and its playback actions">
+          </a>
+        </div>
+        <figcaption class="gallery-controls">
+          <button type="button" data-step="-1" aria-label="Previous radio screenshot" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+          </button>
+          <span class="gallery-caption" data-caption-live aria-live="polite">Station list</span>
+          <button type="button" data-step="1" aria-label="Next radio screenshot" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+          </button>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="collection" aria-labelledby="collection-title">
+      <header class="section-heading">
+        <p class="eyebrow">Your audio collection</p>
+        <h2 id="collection-title">Play the files you keep.</h2>
+      </header>
+      <div class="features">
+        <article class="feature" id="mp3">
+          <div class="feature-copy">
+            <p class="eyebrow">02 / MP3</p>
+            <h3>Play your own MP3s offline</h3>
+            <p>Add MP3 files from your phone and play them anywhere, even offline.</p>
+            <p class="drive-copy"><strong>Low on storage?</strong> Keep your collection on Google Drive. Paste a folder link and Sonacella builds a playlist from its MP3s. Stream over Wi-Fi without copying the collection to your phone.</p>
+            <p class="drive-detail">Use a folder shared with anyone who has the link, with downloads allowed. Tap Refresh when you add new files.</p>
+          </div>
+          <figure class="gallery" data-gallery aria-label="MP3 screenshots">
+            <div class="gallery-slides">
+              <a class="screen is-current" href="assets/mp3.png" data-caption="Local playlist">
+                <img src="assets/mp3.png" width="1080" height="1920" alt="A local MP3 playlist with the current track's playback position">
+              </a>
+              <a class="screen" href="assets/drive-playlist.png" data-caption="Drive playlist" inert>
+                <img src="assets/drive-playlist.png" width="720" height="1600" alt="An MP3 playlist containing Google Drive and local files">
+              </a>
+            </div>
+            <figcaption class="gallery-controls">
+              <button type="button" data-step="-1" aria-label="Previous MP3 screenshot" hidden>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+              </button>
+              <span class="gallery-caption" data-caption-live aria-live="polite">Local playlist</span>
+              <button type="button" data-step="1" aria-label="Next MP3 screenshot" hidden>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+              </button>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="feature chapters" id="chapters">
+          <div class="feature-copy">
+            <p class="eyebrow">03 / Chapters</p>
+            <h3>Find your place in a long recording</h3>
+            <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position.</p>
+          </div>
+          <figure class="gallery" data-gallery aria-label="Chapter screenshots">
+            <div class="gallery-slides">
+              <a class="screen is-current" href="assets/chapters.png" data-caption="Chapter list">
+                <img src="assets/chapters.png" width="1080" height="1920" alt="A long recording in Sonacella with named chapters and their durations">
+              </a>
+              <a class="screen" href="assets/source-card.png" data-caption="Chapter details" inert>
+                <img src="assets/source-card.png" width="1080" height="1920" alt="A chapter card showing its source and start time">
+              </a>
+            </div>
+            <figcaption class="gallery-controls">
+              <button type="button" data-step="-1" aria-label="Previous chapter screenshot" hidden>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+              </button>
+              <span class="gallery-caption" data-caption-live aria-live="polite">Chapter list</span>
+              <button type="button" data-step="1" aria-label="Next chapter screenshot" hidden>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+              </button>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span class="brand">Sonacella</span>
+    <div>
+      <a href="mailto:ceziawaiting@gmail.com">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+</body>
+</html>
