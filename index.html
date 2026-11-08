@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Turn a spare Android phone into a player for internet radio, local MP3s, and music streamed from Google Drive.">
+  <meta name="description" content="Turn a spare Android phone into a player for internet radio with station groups, local MP3s, and music streamed from Google Drive.">
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
@@ -34,7 +34,7 @@
         <p class="eyebrow"><span></span> A free audio player for Android</p>
         <h1 id="intro">Old phone.<br><em>New player.</em></h1>
         <p class="lede">Turn a spare Android phone into an easy-to-use audio player. Tune in to internet radio at home, take your MP3s on a walk, or resume an audiobook from your Google Drive right where you left off. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
-        <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions.</p>
+        <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions. Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
         <a class="play-button" href="https://play.google.com/store/apps/details?id=io.github.miphorez.sonacella">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23"><path fill="currentColor" d="M5 3.7v16.6a.7.7 0 0 0 1.1.6l13.3-8.3a.7.7 0 0 0 0-1.2L6.1 3.1a.7.7 0 0 0-1.1.6Z"/></svg>
           Get it on Google Play
@@ -51,20 +51,32 @@
       </div>
       <figure class="radio-figure gallery" data-gallery aria-label="Internet radio screenshots">
         <div class="gallery-slides">
-          <a class="screen is-current" href="assets/radio.png" data-caption="Station list">
-            <img src="assets/radio.png" width="1080" height="1920" alt="Sonacella playing SmoothJazz.com Global with the saved station list above the controls">
+          <a class="screen is-current" href="assets/radio.png" data-caption="Station groups">
+            <img src="assets/radio.png" width="1080" height="1920" alt="Sonacella playing a jazz station inside an expanded group, with a separate lounge group collapsed below">
+          </a>
+          <a class="screen" href="assets/radio-groups-collapsed.png" data-caption="Collapsed groups" inert>
+            <img src="assets/radio-groups-collapsed.png" width="1080" height="1920" alt="Collapsed Jazz and Lounge groups showing station counts and the playing group indicator">
+          </a>
+          <a class="screen" href="assets/radio-group-menu.png" data-caption="Group menu" inert>
+            <img src="assets/radio-group-menu.png" width="1080" height="1920" alt="The group menu with Rename group, Remove group, Move up and Move down">
+          </a>
+          <a class="screen" href="assets/radio-grouping.png" data-caption="Group stations" inert>
+            <img src="assets/radio-grouping.png" width="1080" height="1920" alt="Selecting multiple stations for grouping, with their current groups shown below their names">
+          </a>
+          <a class="screen" href="assets/radio-move-group.png" data-caption="Move stations" inert>
+            <img src="assets/radio-move-group.png" width="1080" height="1920" alt="Choosing a destination group from a left-aligned list with empty folder icons">
           </a>
           <a class="screen" href="assets/station-card.png" data-caption="Station card" inert>
             <img src="assets/station-card.png" width="1080" height="1920" alt="A station card showing information about a radio station and its playback actions">
           </a>
           <a class="screen" href="assets/station-menu.png" data-caption="Station menu" inert>
-            <img src="assets/station-menu.png" width="1080" height="1920" alt="The station menu with options to view, edit, remove, or reorder a station">
+            <img src="assets/station-menu.png" width="1080" height="1920" alt="The station menu with options to move to a group, view, edit, remove, or reorder a station">
           </a>
           <a class="screen" href="assets/station-edit.png" data-caption="Edit station" inert>
             <img src="assets/station-edit.png" width="1080" height="1920" alt="The station editor showing the title, logo URL, description, and website fields">
           </a>
           <a class="screen" href="assets/app-menu.png" data-caption="Radio menu" inert>
-            <img src="assets/app-menu.png" width="1080" height="1920" alt="The radio menu with Add station and station list import and export">
+            <img src="assets/app-menu.png" width="1080" height="1920" alt="The radio menu with station creation, catalog import and group-preserving export">
           </a>
           <a class="screen" href="assets/station-add.png" data-caption="Add a station" inert>
             <img src="assets/station-add.png" width="1080" height="1920" alt="The Add station form with a title, stream URL, and a choice of HTTPS stream or M3U playlist">
@@ -74,7 +86,7 @@
           <button type="button" data-step="-1" aria-label="Previous radio screenshot" hidden>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
           </button>
-          <span class="gallery-caption" data-caption-live aria-live="polite">Station list</span>
+          <span class="gallery-caption" data-caption-live aria-live="polite">Station groups</span>
           <button type="button" data-step="1" aria-label="Next radio screenshot" hidden>
             <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
           </button>
