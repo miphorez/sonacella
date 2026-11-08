@@ -9,6 +9,7 @@
   <link rel="icon" href="assets/icon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <script src="gallery.js" defer></script>
+  <script src="video.js" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
@@ -29,12 +30,12 @@
   </header>
 
   <main class="wrap">
-    <section class="hero" id="radio" aria-labelledby="intro">
+    <!-- Permanent introduction: keep feature-specific content in the sections below. -->
+    <section class="hero" aria-labelledby="intro">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> A free audio player for Android</p>
         <h1 id="intro">Old phone.<br><em>New player.</em></h1>
-        <p class="lede">Turn a spare Android phone into an easy-to-use audio player. Tune in to internet radio at home, take your MP3s on a walk, or resume an audiobook from your Google Drive right where you left off. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
-        <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions. Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
+        <p class="lede">Internet radio, your MP3s and chapter playlists. All in one focused player.</p>
         <a class="play-button" href="https://play.google.com/store/apps/details?id=io.github.miphorez.sonacella">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23"><path fill="currentColor" d="M5 3.7v16.6a.7.7 0 0 0 1.1.6l13.3-8.3a.7.7 0 0 0 0-1.2L6.1 3.1a.7.7 0 0 0-1.1.6Z"/></svg>
           Get it on Google Play
@@ -48,6 +49,26 @@
           </svg>
           Follow Sonacella on Instagram for updates
         </a>
+      </div>
+      <figure class="hero-video">
+        <div class="video-frame" data-video="KI-CfoK8d9U">
+          <a class="video-launch" href="https://www.youtube.com/watch?v=KI-CfoK8d9U" aria-label="Play the Sonacella promotional video, 20 seconds">
+            <img src="assets/promo-poster.jpg" width="1280" height="720" alt="Sonacella: All your music, inside. A phone, radio and record player." fetchpriority="high">
+            <span class="video-play" aria-hidden="true">&#9654;</span>
+            <span class="video-duration" aria-hidden="true">0:20</span>
+          </a>
+        </div>
+        <figcaption>See Sonacella in 20 seconds. <a href="https://www.youtube.com/watch?v=KI-CfoK8d9U" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+      </figure>
+    </section>
+
+    <!-- Independent feature sections can be edited, reordered or extended. -->
+    <section class="feature-section" id="radio" aria-labelledby="radio-title">
+      <div class="feature-section-copy">
+        <p class="eyebrow">01 / Radio</p>
+        <h2 id="radio-title">A place for every mood.</h2>
+        <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions.</p>
+        <p class="lede">Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
       </div>
       <figure class="radio-figure gallery" data-gallery aria-label="Internet radio screenshots">
         <div class="gallery-slides">
@@ -141,7 +162,7 @@
           <div class="feature-copy">
             <p class="eyebrow">03 / Chapters</p>
             <h3>Find your place in a long recording</h3>
-            <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position.</p>
+            <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
             <p class="drive-copy">In <strong>Playlists</strong>, choose <strong>Import Drive folder</strong> and paste a shared Google Drive folder link. Sonacella automatically creates a playlist from its MP3s and splits recordings into chapters when matching timing files are available.</p>
           </div>
           <figure class="gallery" data-gallery aria-label="Chapter screenshots">
