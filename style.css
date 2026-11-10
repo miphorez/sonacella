@@ -56,7 +56,7 @@ nav a:hover, .site-footer a:hover { color: var(--gold); text-decoration: underli
 .video-launch:hover .video-play { background: #344238; }
 .video-duration { position: absolute; right: 14px; bottom: 12px; padding: 2px 8px; border-radius: 4px; background: #111a15e8; color: var(--text); font-size: 13px; }
 .video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
-.hero-video figcaption { margin-top: 13px; color: var(--muted); text-align: center; font-size: 13px; }
+.hero-video figcaption, .release-video figcaption { margin-top: 13px; color: var(--muted); text-align: center; font-size: 13px; }
 .feature-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .92fr); align-items: center; gap: 60px; padding-block: 48px 60px; border-top: 1px solid var(--line); }
 .feature-section h2 { margin-block: 18px 24px; font-size: clamp(34px, 5vw, 59px); line-height: 1.04; letter-spacing: -.045em; }
 .eyebrow { color: var(--gold); font-size: 12px; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; }
@@ -173,8 +173,12 @@ h1 em { color: var(--gold); font-weight: inherit; }
   background: var(--surface);
 }
 .release-entry + .release-entry { margin-top: 18px; }
+.release-entry-with-video { row-gap: 20px; }
+.release-video { grid-column: 2; grid-row: 1 / span 2; width: min(100%, 300px); justify-self: center; }
+.video-frame-portrait { aspect-ratio: 9 / 16; }
 .release-copy h3 { margin-block: 12px 16px; font-size: clamp(27px, 3.5vw, 46px); line-height: 1.07; letter-spacing: -.035em; }
 .release-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(100%, 484px); justify-self: center; }
+.release-entry-with-video > :where(.release-screens) { width: min(100%, 320px); justify-self: start; }
 .release-screens a { display: block; overflow: hidden; border: 1px solid #718073; border-radius: 12px; }
 .release-screens a:hover { border-color: var(--gold); }
 .release-screens img { width: 100%; height: auto; }
@@ -203,6 +207,8 @@ h1 em { color: var(--gold); font-weight: inherit; }
   .feature { grid-template-columns: 1fr; gap: 17px; }
   .feature .gallery { justify-self: center; }
   .release-entry { grid-template-columns: 1fr; }
+  .release-video { grid-column: auto; grid-row: auto; }
+  .release-entry-with-video > :where(.release-screens) { justify-self: center; }
 }
 
 @media (max-width: 420px) {

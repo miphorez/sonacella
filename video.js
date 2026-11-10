@@ -5,7 +5,7 @@ for (const frame of document.querySelectorAll("[data-video]")) {
     event.preventDefault();
     const player = document.createElement("iframe");
     player.src = `https://www.youtube.com/embed/${encodeURIComponent(frame.dataset.video)}?autoplay=1&playsinline=1&rel=0`;
-    player.title = "Sonacella — All your music, inside.";
+    player.title = frame.dataset.videoTitle;
     player.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
     player.allowFullscreen = true;
     player.referrerPolicy = "strict-origin-when-cross-origin";
