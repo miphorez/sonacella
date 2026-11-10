@@ -16,6 +16,8 @@ The site is published with GitHub Pages from the `pages` branch.
   creates the YouTube player only after the visitor activates the cover. There is no
   player, video playback or YouTube request on page load. Without JavaScript, the
   cover opens the video on YouTube. Replacing the promotional video requires updating
-  both the `data-video` ID and fallback link in `index.html`.
+  the `data-video` ID and the YouTube links in `index.html`. The release demo
+  uses the same click-to-play behavior with a local portrait cover and a Shorts
+  fallback link.
 
 Preview locally with `python -m http.server 8765 --bind 127.0.0.1`.
