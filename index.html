@@ -26,6 +26,7 @@
       <a href="#radio">Radio</a>
       <a href="#mp3">MP3</a>
       <a href="#chapters">Chapters</a>
+      <a href="#station-cards">Station Cards</a>
       <a href="#releases">Releases</a>
     </nav>
   </header>
@@ -200,11 +201,41 @@
         </article>
       </div>
     </section>
+    <section class="collection" id="station-cards" aria-labelledby="station-cards-title">
+      <header class="section-heading">
+        <p class="eyebrow">For Microsoft Edge</p>
+        <h2 id="station-cards-title">A radio page. A station card.</h2>
+      </header>
+      <p class="lede">Found a radio station you want to keep? Sonacella Station Cards checks a supported public station page and prepares its stream, artwork and details for review. Export verified cards as JSON or a QR image generated in your browser.</p>
+      <p><a class="play-button" href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip">Download Station Cards 0.1.4</a></p>
+      <p><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">GitHub release</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/INSTALL.md">Full installation and update guide</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip.sha256">SHA-256 checksum</a></p>
+      <h3>Install in Edge</h3>
+      <ol>
+        <li>Download the ZIP, verify its SHA-256 and extract it to a permanent folder.</li>
+        <li>Open <strong>edge://extensions</strong> and turn on <strong>Developer mode</strong>.</li>
+        <li>Choose <strong>Load unpacked</strong>, then select the inner <strong>Sonacella-Station-Cards</strong> folder containing <strong>manifest.json</strong>.</li>
+        <li>Open a public HTTPS station page, choose <strong>Create station card</strong> in the extension and allow website checks when requested. Review the result before exporting.</li>
+      </ol>
+      <p>To update, download and verify the next user ZIP, replace the files in the same installed folder, then choose <strong>Reload</strong> on the existing extension. Keep the folder after installation. Updates are manual.</p>
+      <p class="requirements">Browser extension preview · Installed manually, outside Edge Add-ons · No Windows helper or extension account required</p>
+      <p>QR scanning requires Sonacella 1.0.9 or later for Android; check Google Play availability. Full catalog import replaces the radio list, so back it up first. Some station websites are unsupported, and a verified sample does not guarantee future availability.</p>
+      <p><a href="station-cards/privacy.html">Station Cards privacy policy</a></p>
+    </section>
     <section class="collection" id="releases" aria-labelledby="releases-title">
       <header class="section-heading">
         <p class="eyebrow">What's new</p>
         <h2 id="releases-title">Releases</h2>
       </header>
+      <article class="release-entry release-entry-text" id="station-cards-release-0-1-4" aria-labelledby="station-cards-release-0-1-4-title">
+        <div class="release-copy">
+          <p class="eyebrow" id="station-cards-release-0-1-4-title">Station Cards 0.1.4 · Edge extension</p>
+          <h3>Found a station? Take it with you.</h3>
+          <p class="lede">The standalone Sonacella Station Cards preview is now available on GitHub. Turn a supported station website into a reviewed card with an audio source, artwork and details, then save JSON or a local QR image.</p>
+          <p>Version 0.1.4 supports published HTTPS stream ports and Classic Radio Non Stop, alongside supported Klassik Radio channels. The download includes installation and manual-update instructions, with a separate SHA-256 file.</p>
+          <p><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">Get the GitHub preview</a> · <a href="#station-cards">How to install</a></p>
+          <p class="requirements">Published on GitHub · <time datetime="2026-11-12">November 12, 2026</time> · Browser extension release</p>
+        </div>
+      </article>
       <article class="release-entry release-entry-with-video" id="release-1-0-8" aria-labelledby="release-1-0-8-title">
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-8-title">Sonacella 1.0.8</p>
