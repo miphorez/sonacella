@@ -2,6 +2,11 @@
 
 The site is published with GitHub Pages from the `pages` branch.
 
+The Sonacella Station Cards Edge extension has a separate policy at
+`station-cards/privacy.html`, linked from the footer. Its ready-to-host source
+comes from the extension's reviewed store kit; keep it separate from the
+Android app policy at `privacy.html`.
+
 ## Page structure
 
 - Keep the permanent `.hero` introduction separate from feature-specific content.
