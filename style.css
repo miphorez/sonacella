@@ -175,7 +175,10 @@ h1 em { color: var(--gold); font-weight: inherit; }
 .release-entry + .release-entry { margin-top: 18px; }
 .release-entry-text { grid-template-columns: 1fr; }
 .release-entry-text .release-copy { max-width: 78ch; }
+.release-entry-text .release-copy p + p { margin-top: 12px; }
 #station-cards > :where(p, ol) { max-width: 78ch; }
+#station-cards > p { margin-block: 14px; }
+#station-cards > h3 { margin-block: 24px 12px; }
 #station-cards li + li { margin-top: 8px; }
 .release-entry-with-video { row-gap: 20px; }
 .release-video { grid-column: 2; grid-row: 1 / span 2; width: min(100%, 300px); justify-self: center; }
