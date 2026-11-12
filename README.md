@@ -17,6 +17,9 @@ Android app policy at `privacy.html`.
   use the existing `.feature` cards and screenshot galleries.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
+- Sonacella 1.0.9 reserves a portrait video area with a coming-soon message.
+  When its promo is ready, replace the placeholder with the same local-poster,
+  click-to-play markup used by the other release videos.
 - The Station Cards section links to the public browser-extension user ZIP,
   installation/update instructions and SHA-256 in this repository's GitHub
   Releases. Keep its preview/manual-install status distinct from Android app
