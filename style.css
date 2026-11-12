@@ -173,6 +173,10 @@ h1 em { color: var(--gold); font-weight: inherit; }
   background: var(--surface);
 }
 .release-entry + .release-entry { margin-top: 18px; }
+.release-entry-text { grid-template-columns: 1fr; }
+.release-entry-text .release-copy { max-width: 78ch; }
+#station-cards > :where(p, ol) { max-width: 78ch; }
+#station-cards li + li { margin-top: 8px; }
 .release-entry-with-video { row-gap: 20px; }
 .release-video { grid-column: 2; grid-row: 1 / span 2; width: min(100%, 300px); justify-self: center; }
 .video-frame-portrait { aspect-ratio: 9 / 16; }
