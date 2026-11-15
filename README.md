@@ -11,8 +11,11 @@ Android app policy at `privacy.html`.
 
 - Keep the permanent `.hero` introduction separate from feature-specific content.
   It contains the product headline, store and social-profile links, and the promotional video.
-  Instagram and Pinterest share the wrapping `.social-links` row. Pinterest is also
-  linked in the footer; keep the profile URL consistent in both places.
+  Instagram, Pinterest, Telegram news and the community chat share the wrapping
+  `.social-links` row. Pinterest and both Telegram destinations are also linked in
+  the footer; keep their URLs consistent in both places. The official Telegram
+  channel is `https://t.me/sonacella`; the chat for station cards, questions and
+  discoveries is `https://t.me/SonacellaChat`.
   Permanent refers to its content role; it does not stick to the viewport on scroll.
 - Add, reorder or update independent feature sections below the hero. Keep section IDs
   aligned with the header navigation. Radio uses `.feature-section`; MP3 and chapters
