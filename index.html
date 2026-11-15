@@ -7,9 +7,10 @@
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=release-carousel">
   <script src="gallery.js" defer></script>
-  <script src="video.js" defer></script>
+  <script src="video.js?v=release-carousel" defer></script>
+  <script src="releases.js" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
@@ -247,6 +248,12 @@
         <p class="eyebrow">What's new</p>
         <h2 id="releases-title">Releases</h2>
       </header>
+      <p class="release-download"><a href="https://play.google.com/store/apps/details?id=io.github.miphorez.sonacella">Get the latest Sonacella on Google Play</a></p>
+      <div class="release-controls" data-release-controls hidden>
+        <button type="button" data-release-step="-1" aria-label="Newer release" disabled><span aria-hidden="true">←</span> Newer</button>
+        <p class="release-status" data-release-status role="status" aria-atomic="true"></p>
+        <button type="button" data-release-step="1" aria-label="Older release">Older <span aria-hidden="true">→</span></button>
+      </div>
       <article class="release-entry release-entry-with-video" id="release-1-0-9" aria-labelledby="release-1-0-9-title">
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-9-title">Sonacella 1.0.9</p>
@@ -283,7 +290,7 @@
           <h3>Good radio is worth sharing</h3>
           <p class="lede">Share a station from its card, hold a group heading to share a group, or choose <strong>Share station list</strong> in the <strong>RADIO</strong> menu to send your full list through your favourite messenger.</p>
           <p class="lede">Open the attachment in Sonacella to preview a station's artwork and details. Tap <strong>Add shared station</strong>, or choose which stations to add from a shared group or list.</p>
-          <p class="requirements">Available on Google Play · November 11, 2026</p>
+          <p class="requirements">Available on Google Play · <time datetime="2026-11-11">November 11, 2026</time></p>
         </div>
         <figure class="release-video">
           <div class="video-frame video-frame-portrait" data-video="RhJs4jxLqas" data-video-title="Sonacella 1.0.8 — Share stations">
@@ -302,6 +309,7 @@
           <h3>Send a radio station to your other devices</h3>
           <p class="lede">Connect the same Google account on each device in <strong>Settings → Device sync</strong>. While listening, open the <strong>RADIO</strong> menu and tap <strong>Sync station</strong>. Your other devices can switch to that station if it’s already in their lists.</p>
           <p class="lede">Each device joins the live stream at its own time.</p>
+          <p class="requirements">Android app release · <time datetime="2026-11-10">November 10, 2026</time></p>
         </div>
         <figure class="release-video">
           <div class="video-frame video-frame-portrait" data-video="R29wUCbG4mM" data-video-title="Sonacella 1.0.7 — Sync station">

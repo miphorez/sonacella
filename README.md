@@ -22,6 +22,13 @@ Android app policy at `privacy.html`.
   use the existing `.feature` cards and screenshot galleries.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
+- `releases.js` shows one release at a time, newest first, with Newer/Older buttons,
+  a live position/version label and horizontal touch swipes. Navigation stops at
+  either end; there is no automatic advance. Keep each release ID stable for direct
+  links. Opening a release hash selects that card; `#releases` selects the newest.
+  Switching cards stops an embedded release video and restores its cover. The
+  current Google Play download link stays outside the carousel. Without JavaScript,
+  all release entries remain readable and navigation controls stay hidden.
 - Sonacella 1.0.9 includes the station QR import promo (`j-g4IMO2Xp0`) with
   a local poster extracted from the approved final video. It uses the same
   click-to-play behavior and YouTube fallback link as the other release videos.
