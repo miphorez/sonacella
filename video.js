@@ -1,5 +1,8 @@
 for (const frame of document.querySelectorAll("[data-video]")) {
   const launch = frame.querySelector(".video-launch");
+  frame.addEventListener("stop-video", () => {
+    if (frame.querySelector("iframe")) frame.replaceChildren(launch);
+  });
   launch.addEventListener("click", (event) => {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
