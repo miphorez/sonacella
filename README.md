@@ -10,7 +10,9 @@ Android app policy at `privacy.html`.
 ## Page structure
 
 - Keep the permanent `.hero` introduction separate from feature-specific content.
-  It contains the product headline, store and Instagram links, and the promotional video.
+  It contains the product headline, store and social-profile links, and the promotional video.
+  Instagram and Pinterest share the wrapping `.social-links` row. Pinterest is also
+  linked in the footer; keep the profile URL consistent in both places.
   Permanent refers to its content role; it does not stick to the viewport on scroll.
 - Add, reorder or update independent feature sections below the hero. Keep section IDs
   aligned with the header navigation. Radio uses `.feature-section`; MP3 and chapters
