@@ -22,6 +22,12 @@ Android app policy at `privacy.html`.
   use the existing `.feature` cards and screenshot galleries.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
+- The independent `#station-collection` section after Radio presents the approved
+  30-second "Pick a card. Find your sound." promo (`OEMSV_mZwo4`), links to the
+  Instagram station cards and explains QR image import. Its local portrait poster
+  is extracted at 24.5 seconds from the approved final video. It shares the existing
+  click-to-play player and YouTube fallback; it is separate from release news and
+  the browser extension installation instructions.
 - `releases.js` shows one release at a time, newest first, with Newer/Older buttons,
   a live position/version label and horizontal touch swipes. Navigation stops at
   either end; there is no automatic advance. Keep each release ID stable for direct
