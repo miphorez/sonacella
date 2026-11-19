@@ -84,19 +84,6 @@ h1 em { color: var(--gold); font-weight: inherit; }
 }
 .play-button:hover { background: #f8dda8; }
 .requirements { margin-top: 11px; color: var(--muted); font-size: 13px; }
-.radio-figure {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  gap: 17px;
-  overflow: hidden;
-  padding: 27px 18px 18px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background:
-    repeating-radial-gradient(circle at 50% 47%, transparent 0 17px, #ead49a17 18px 19px, transparent 20px 29px),
-    radial-gradient(ellipse at 50% 45%, #42523b, #202f24 55%, #19251d 90%);
-}
 .gallery { min-width: 0; }
 .gallery-slides {
   position: relative;
@@ -119,7 +106,6 @@ h1 em { color: var(--gold); font-weight: inherit; }
 }
 .screen.is-current { opacity: 1; pointer-events: auto; }
 .screen img { width: 100%; height: 100%; object-fit: contain; }
-.radio-figure .gallery-slides, .radio-figure .gallery-controls { width: min(100%, 250px); }
 .gallery-controls {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr) 44px;
@@ -160,8 +146,6 @@ h1 em { color: var(--gold); font-weight: inherit; }
 .feature p:not(.eyebrow) { max-width: 50ch; color: var(--muted); font-size: 16px; line-height: 1.65; }
 .feature .gallery { width: min(100%, 250px); justify-self: center; }
 .feature .gallery-controls { margin-top: 12px; }
-.feature .radio-figure { width: min(100%, 320px); }
-.feature .radio-figure .gallery-controls { margin-top: 0; }
 .drive-copy { margin-top: 14px; }
 .drive-copy strong { color: var(--pistachio); }
 .feature p.drive-detail { margin-top: 10px; font-size: 13px; }
