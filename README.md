@@ -17,9 +17,10 @@ Android app policy at `privacy.html`.
   channel is `https://t.me/sonacella`; the chat for station cards, questions and
   discoveries is `https://t.me/SonacellaChat`.
   Permanent refers to its content role; it does not stick to the viewport on scroll.
-- The feature carousel under “A place for every mood” shows Radio, MP3 and
-  Chapters one at a time. Keep their IDs aligned with the header links so direct
-  links select the corresponding card. Each card keeps its own screenshot gallery.
+- The feature carousel shows Radio, MP3 and Chapters one at a time. Its position
+  indicator starts with “A place for every mood”. Keep card IDs aligned with the
+  header links so direct links select the corresponding card. Each card keeps
+  its own screenshot gallery.
   Add future feature cards inside the same carousel with a unique ID and a
   `data-carousel-slide` attribute.
 - Add new releases above older entries in the Releases section. Keep screenshots
