@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=feature-cards">
+  <link rel="stylesheet" href="style.css?v=feature-indicator">
   <script src="gallery.js" defer></script>
   <script src="video.js?v=release-carousel" defer></script>
   <script src="carousel.js" defer></script>
@@ -86,19 +86,16 @@
       </figure>
     </section>
 
-    <section class="collection" id="features" aria-labelledby="features-title" data-carousel>
-      <header class="section-heading">
-        <h2 id="features-title">A place for every mood.</h2>
-      </header>
+    <section class="collection" id="features" aria-label="A place for every mood" data-carousel>
       <div class="carousel-controls" data-carousel-controls hidden>
         <button type="button" data-carousel-step="-1" aria-label="Previous feature" disabled><span aria-hidden="true">←</span> Previous</button>
-        <p class="carousel-status" data-carousel-status role="status" aria-atomic="true"></p>
+        <p class="carousel-status" role="status" aria-atomic="true">A place for every mood: <span data-carousel-status></span></p>
         <button type="button" data-carousel-step="1" aria-label="Next feature">Next <span aria-hidden="true">→</span></button>
       </div>
       <article class="feature" id="radio" aria-labelledby="radio-title" data-carousel-slide>
         <div class="feature-copy">
           <p class="eyebrow">Radio</p>
-          <h3 id="radio-title">Organise and play internet radio</h3>
+          <h2 id="radio-title">Organise and play internet radio</h2>
           <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions.</p>
           <p class="lede">Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
         </div>
@@ -149,7 +146,7 @@
       <article class="feature" id="mp3" aria-labelledby="mp3-title" data-carousel-slide>
         <div class="feature-copy">
           <p class="eyebrow">MP3</p>
-          <h3 id="mp3-title">Play your own MP3s offline</h3>
+          <h2 id="mp3-title">Play your own MP3s offline</h2>
           <p>Choose <strong>Add files</strong> to add MP3s from your phone and play them offline.</p>
           <p class="drive-copy"><strong>Low on storage?</strong> Choose <strong>Add link</strong> and paste a Google Drive link to an MP3 file or a folder. Sonacella builds a playlist from the folder's MP3s, so you can stream your collection over Wi-Fi without copying it to your phone.</p>
           <p class="drive-detail">Use a folder shared with anyone who has the link, with downloads allowed. Tap <strong>Refresh</strong> after adding new files to your Google Drive folder.</p>
@@ -186,7 +183,7 @@
       <article class="feature" id="chapters" aria-labelledby="chapters-title" data-carousel-slide>
         <div class="feature-copy">
           <p class="eyebrow">Chapters</p>
-          <h3 id="chapters-title">Find your place in a long recording</h3>
+          <h2 id="chapters-title">Find your place in a long recording</h2>
           <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
           <p class="drive-copy">In <strong>Playlists</strong>, choose <strong>Import Drive folder</strong> and paste a shared Google Drive folder link. Sonacella automatically creates a playlist from its MP3s and splits recordings into chapters when matching timing files are available.</p>
         </div>
