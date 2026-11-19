@@ -12,10 +12,10 @@ Android app policy at `privacy.html`.
 - Keep the permanent `.hero` introduction separate from feature-specific content.
   It contains the product headline, store and social-profile links, and the promotional video.
   Its social links group Instagram, Pinterest and TikTok on the first row, with
-  Telegram news and Community chat together below. Pinterest and both Telegram
-  destinations are also linked in the footer; keep their URLs consistent in
-  both places. The official Telegram channel is `https://t.me/sonacella`; the chat for station cards, questions and
-  discoveries is `https://t.me/SonacellaChat`.
+  Telegram news and Community chat together below. The footer lists these five
+  destinations in the same order. Keep their URLs consistent across both areas.
+  The official Telegram channel is `https://t.me/sonacella`; the chat for station
+  cards, questions and discoveries is `https://t.me/SonacellaChat`.
   Permanent refers to its content role; it does not stick to the viewport on scroll.
 - The feature carousel shows Radio, MP3 and Chapters one at a time. Its position
   indicator starts with “A place for every mood”. Keep card IDs aligned with the
