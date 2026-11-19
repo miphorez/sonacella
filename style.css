@@ -141,7 +141,6 @@ h1 em { color: var(--gold); font-weight: inherit; }
   border-radius: 14px;
   background: var(--surface);
 }
-.chapters { background: #28291e; border-color: #454639; }
 .feature h3 { margin-block: 12px 16px; font-size: clamp(27px, 3.5vw, 46px); line-height: 1.07; letter-spacing: -.035em; }
 .feature p:not(.eyebrow) { max-width: 50ch; color: var(--muted); font-size: 16px; line-height: 1.65; }
 .feature .gallery { width: min(100%, 250px); justify-self: center; }
