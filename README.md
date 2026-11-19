@@ -17,24 +17,27 @@ Android app policy at `privacy.html`.
   channel is `https://t.me/sonacella`; the chat for station cards, questions and
   discoveries is `https://t.me/SonacellaChat`.
   Permanent refers to its content role; it does not stick to the viewport on scroll.
-- Add, reorder or update independent feature sections below the hero. Keep section IDs
-  aligned with the header navigation. Radio uses `.feature-section`; MP3 and chapters
-  use the existing `.feature` cards and screenshot galleries.
+- The feature carousel under “A place for every mood” shows Radio, MP3 and
+  Chapters one at a time. Keep their IDs aligned with the header links so direct
+  links select the corresponding card. Each card keeps its own screenshot gallery.
+  Add future feature cards inside the same carousel with a unique ID and a
+  `data-carousel-slide` attribute.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
-- The independent `#station-collection` section after Radio presents the approved
+- The independent `#station-collection` section after the feature carousel presents the approved
   30-second "Pick a card. Find your sound." promo (`OEMSV_mZwo4`), links to the
   Instagram station cards and explains QR image import. Its local portrait poster
   is extracted at 24.5 seconds from the approved final video. It shares the existing
   click-to-play player and YouTube fallback; it is separate from release news and
   the browser extension installation instructions.
-- `releases.js` shows one release at a time, newest first, with Newer/Older buttons,
+- `carousel.js` drives the feature and release carousels. The release carousel
+  shows one release at a time, newest first, with Newer/Older buttons,
   a live position/version label and horizontal touch swipes. Navigation stops at
   either end; there is no automatic advance. Keep each release ID stable for direct
   links. Opening a release hash selects that card; `#releases` selects the newest.
   Switching cards stops an embedded release video and restores its cover. The
   current Google Play download link stays outside the carousel. Without JavaScript,
-  all release entries remain readable and navigation controls stay hidden.
+  all feature and release cards remain readable and carousel controls stay hidden.
 - Sonacella 1.0.11 includes the sleep timer Short (`qIp5XpzqfZI`) with a local
   poster extracted from the approved final video. It uses the same click-to-play
   player and YouTube fallback link.
