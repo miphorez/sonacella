@@ -35,6 +35,9 @@ Android app policy at `privacy.html`.
   Switching cards stops an embedded release video and restores its cover. The
   current Google Play download link stays outside the carousel. Without JavaScript,
   all release entries remain readable and navigation controls stay hidden.
+- Sonacella 1.0.11 includes the sleep timer Short (`qIp5XpzqfZI`) with a local
+  poster extracted from the approved final video. It uses the same click-to-play
+  player and YouTube fallback link.
 - Sonacella 1.0.9 includes the station QR import promo (`j-g4IMO2Xp0`) with
   a local poster extracted from the approved final video. It uses the same
   click-to-play behavior and YouTube fallback link as the other release videos.
