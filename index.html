@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=station-collection">
+  <link rel="stylesheet" href="style.css?v=feature-carousel">
   <script src="gallery.js" defer></script>
   <script src="video.js?v=release-carousel" defer></script>
-  <script src="releases.js" defer></script>
+  <script src="carousel.js" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
@@ -86,57 +86,142 @@
       </figure>
     </section>
 
-    <!-- Independent feature sections can be edited, reordered or extended. -->
-    <section class="feature-section" id="radio" aria-labelledby="radio-title">
-      <div class="feature-section-copy">
-        <p class="eyebrow">01 / Radio</p>
-        <h2 id="radio-title">A place for every mood.</h2>
-        <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions.</p>
-        <p class="lede">Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
+    <section class="collection" id="features" aria-labelledby="features-title" data-carousel>
+      <header class="section-heading">
+        <h2 id="features-title">A place for every mood.</h2>
+      </header>
+      <div class="carousel-controls" data-carousel-controls hidden>
+        <button type="button" data-carousel-step="-1" aria-label="Previous feature" disabled><span aria-hidden="true">←</span> Previous</button>
+        <p class="carousel-status" data-carousel-status role="status" aria-atomic="true"></p>
+        <button type="button" data-carousel-step="1" aria-label="Next feature">Next <span aria-hidden="true">→</span></button>
       </div>
-      <figure class="radio-figure gallery" data-gallery aria-label="Internet radio screenshots">
-        <div class="gallery-slides">
-          <a class="screen is-current" href="assets/radio.png" data-caption="Station groups">
-            <img src="assets/radio.png" width="1080" height="1920" alt="Sonacella playing a jazz station inside an expanded group, with a separate lounge group collapsed below">
-          </a>
-          <a class="screen" href="assets/radio-groups-collapsed.png" data-caption="Collapsed groups" inert>
-            <img src="assets/radio-groups-collapsed.png" width="1080" height="1920" alt="Collapsed Jazz and Lounge groups showing station counts and the playing group indicator">
-          </a>
-          <a class="screen" href="assets/radio-group-menu.png" data-caption="Group menu" inert>
-            <img src="assets/radio-group-menu.png" width="1080" height="1920" alt="The group menu with Rename group, Remove group, Move up and Move down">
-          </a>
-          <a class="screen" href="assets/radio-grouping.png" data-caption="Group stations" inert>
-            <img src="assets/radio-grouping.png" width="1080" height="1920" alt="Selecting multiple stations for grouping, with their current groups shown below their names">
-          </a>
-          <a class="screen" href="assets/radio-move-group.png" data-caption="Move stations" inert>
-            <img src="assets/radio-move-group.png" width="1080" height="1920" alt="Choosing a destination group from a left-aligned list with empty folder icons">
-          </a>
-          <a class="screen" href="assets/station-card.png" data-caption="Station card" inert>
-            <img src="assets/station-card.png" width="1080" height="1920" alt="A station card showing information about a radio station and its playback actions">
-          </a>
-          <a class="screen" href="assets/station-menu.png" data-caption="Station menu" inert>
-            <img src="assets/station-menu.png" width="1080" height="1920" alt="The station menu with options to move to a group, view, edit, remove, or reorder a station">
-          </a>
-          <a class="screen" href="assets/station-edit.png" data-caption="Edit station" inert>
-            <img src="assets/station-edit.png" width="1080" height="1920" alt="The station editor showing the title, logo URL, description, and website fields">
-          </a>
-          <a class="screen" href="assets/app-menu.png" data-caption="Radio menu" inert>
-            <img src="assets/app-menu.png" width="1080" height="1920" alt="The radio menu with station creation, catalog import and group-preserving export">
-          </a>
-          <a class="screen" href="assets/station-add.png" data-caption="Add a station" inert>
-            <img src="assets/station-add.png" width="1080" height="1920" alt="The Add station form with a title, stream URL, and a choice of HTTPS stream or M3U playlist">
-          </a>
+      <article class="feature" id="radio" aria-labelledby="radio-title" data-carousel-slide>
+        <div class="feature-copy">
+          <p class="eyebrow">Radio</p>
+          <h3 id="radio-title">Organise and play internet radio</h3>
+          <p class="lede"><strong>Make the station list your own.</strong> Add stations by HTTPS stream or M3U playlist link, then edit their names, logos, and descriptions.</p>
+          <p class="lede">Organise stations into collapsible groups for seasons, genres, or moods. Move several stations at once while your music keeps playing.</p>
         </div>
-        <figcaption class="gallery-controls">
-          <button type="button" data-step="-1" aria-label="Previous radio screenshot" hidden>
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-          </button>
-          <span class="gallery-caption" data-caption-live aria-live="polite">Station groups</span>
-          <button type="button" data-step="1" aria-label="Next radio screenshot" hidden>
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-          </button>
-        </figcaption>
-      </figure>
+        <figure class="radio-figure gallery" data-gallery aria-label="Internet radio screenshots">
+          <div class="gallery-slides">
+            <a class="screen is-current" href="assets/radio.png" data-caption="Station groups">
+              <img src="assets/radio.png" width="1080" height="1920" alt="Sonacella playing a jazz station inside an expanded group, with a separate lounge group collapsed below">
+            </a>
+            <a class="screen" href="assets/radio-groups-collapsed.png" data-caption="Collapsed groups" inert>
+              <img src="assets/radio-groups-collapsed.png" width="1080" height="1920" alt="Collapsed Jazz and Lounge groups showing station counts and the playing group indicator">
+            </a>
+            <a class="screen" href="assets/radio-group-menu.png" data-caption="Group menu" inert>
+              <img src="assets/radio-group-menu.png" width="1080" height="1920" alt="The group menu with Rename group, Remove group, Move up and Move down">
+            </a>
+            <a class="screen" href="assets/radio-grouping.png" data-caption="Group stations" inert>
+              <img src="assets/radio-grouping.png" width="1080" height="1920" alt="Selecting multiple stations for grouping, with their current groups shown below their names">
+            </a>
+            <a class="screen" href="assets/radio-move-group.png" data-caption="Move stations" inert>
+              <img src="assets/radio-move-group.png" width="1080" height="1920" alt="Choosing a destination group from a left-aligned list with empty folder icons">
+            </a>
+            <a class="screen" href="assets/station-card.png" data-caption="Station card" inert>
+              <img src="assets/station-card.png" width="1080" height="1920" alt="A station card showing information about a radio station and its playback actions">
+            </a>
+            <a class="screen" href="assets/station-menu.png" data-caption="Station menu" inert>
+              <img src="assets/station-menu.png" width="1080" height="1920" alt="The station menu with options to move to a group, view, edit, remove, or reorder a station">
+            </a>
+            <a class="screen" href="assets/station-edit.png" data-caption="Edit station" inert>
+              <img src="assets/station-edit.png" width="1080" height="1920" alt="The station editor showing the title, logo URL, description, and website fields">
+            </a>
+            <a class="screen" href="assets/app-menu.png" data-caption="Radio menu" inert>
+              <img src="assets/app-menu.png" width="1080" height="1920" alt="The radio menu with station creation, catalog import and group-preserving export">
+            </a>
+            <a class="screen" href="assets/station-add.png" data-caption="Add a station" inert>
+              <img src="assets/station-add.png" width="1080" height="1920" alt="The Add station form with a title, stream URL, and a choice of HTTPS stream or M3U playlist">
+            </a>
+          </div>
+          <figcaption class="gallery-controls">
+            <button type="button" data-step="-1" aria-label="Previous radio screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+            <span class="gallery-caption" data-caption-live aria-live="polite">Station groups</span>
+            <button type="button" data-step="1" aria-label="Next radio screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="feature" id="mp3" aria-labelledby="mp3-title" data-carousel-slide>
+        <div class="feature-copy">
+          <p class="eyebrow">MP3</p>
+          <h3 id="mp3-title">Play your own MP3s offline</h3>
+          <p>Choose <strong>Add files</strong> to add MP3s from your phone and play them offline.</p>
+          <p class="drive-copy"><strong>Low on storage?</strong> Choose <strong>Add link</strong> and paste a Google Drive link to an MP3 file or a folder. Sonacella builds a playlist from the folder's MP3s, so you can stream your collection over Wi-Fi without copying it to your phone.</p>
+          <p class="drive-detail">Use a folder shared with anyone who has the link, with downloads allowed. Tap <strong>Refresh</strong> after adding new files to your Google Drive folder.</p>
+        </div>
+        <figure class="gallery" data-gallery aria-label="MP3 screenshots">
+          <div class="gallery-slides">
+            <a class="screen is-current" href="assets/mp3.png" data-caption="Local playlist">
+              <img src="assets/mp3.png" width="1080" height="1920" alt="A local MP3 playlist with the current track's playback position">
+            </a>
+            <a class="screen" href="assets/mp3-menu.png" data-caption="Track menu" inert>
+              <img src="assets/mp3-menu.png" width="1080" height="1920" alt="The local MP3 track menu with options to locate the file, remove it from the playlist, or move it">
+            </a>
+            <a class="screen" href="assets/mp3-app-menu.png" data-caption="MP3 menu" inert>
+              <img src="assets/mp3-app-menu.png" width="1080" height="1920" alt="The MP3 menu showing Add link, Add files, Add timing file, and Playlists">
+            </a>
+            <a class="screen" href="assets/mp3-add-link.png" data-caption="Add link" inert>
+              <img src="assets/mp3-add-link.png" width="1080" height="1920" alt="The Add link dialog with a URL field and instructions for sharing a Google Drive file or folder">
+            </a>
+            <a class="screen" href="assets/drive-playlist.png" data-caption="Drive playlist" inert>
+              <img src="assets/drive-playlist.png" width="720" height="1600" alt="An MP3 playlist containing Google Drive and local files">
+            </a>
+          </div>
+          <figcaption class="gallery-controls">
+            <button type="button" data-step="-1" aria-label="Previous MP3 screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+            <span class="gallery-caption" data-caption-live aria-live="polite">Local playlist</span>
+            <button type="button" data-step="1" aria-label="Next MP3 screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="feature chapters" id="chapters" aria-labelledby="chapters-title" data-carousel-slide>
+        <div class="feature-copy">
+          <p class="eyebrow">Chapters</p>
+          <h3 id="chapters-title">Find your place in a long recording</h3>
+          <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
+          <p class="drive-copy">In <strong>Playlists</strong>, choose <strong>Import Drive folder</strong> and paste a shared Google Drive folder link. Sonacella automatically creates a playlist from its MP3s and splits recordings into chapters when matching timing files are available.</p>
+        </div>
+        <figure class="gallery" data-gallery aria-label="Chapter screenshots">
+          <div class="gallery-slides">
+            <a class="screen is-current" href="assets/chapters.png" data-caption="Chapter list">
+              <img src="assets/chapters.png" width="1080" height="1920" alt="A long recording in Sonacella with named chapters and their durations">
+            </a>
+            <a class="screen" href="assets/source-card.png" data-caption="Chapter details" inert>
+              <img src="assets/source-card.png" width="1080" height="1920" alt="A chapter card showing its source and start time">
+            </a>
+            <a class="screen" href="assets/multitrack-menu.png" data-caption="Track menu" inert>
+              <img src="assets/multitrack-menu.png" width="1080" height="1920" alt="A chapter track menu with options to view details, edit the shared MP3 link, remove the track, or reorder it">
+            </a>
+            <a class="screen" href="assets/multitrack-edit-link.png" data-caption="Edit MP3 link" inert>
+              <img src="assets/multitrack-edit-link.png" width="1080" height="1920" alt="The Edit MP3 link dialog explaining that replacing the source audio updates all tracks from that source">
+            </a>
+            <a class="screen" href="assets/playlist-picker.png" data-caption="Choose a playlist" inert>
+              <img src="assets/playlist-picker.png" width="1080" height="1920" alt="The playlist picker with track counts and the Import Drive folder button">
+            </a>
+            <a class="screen" href="assets/drive-folder-import.png" data-caption="Import Drive folder" inert>
+              <img src="assets/drive-folder-import.png" width="1080" height="1920" alt="The Google Drive folder import dialog with a field for the shared folder link">
+            </a>
+          </div>
+          <figcaption class="gallery-controls">
+            <button type="button" data-step="-1" aria-label="Previous chapter screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+            <span class="gallery-caption" data-caption-live aria-live="polite">Chapter list</span>
+            <button type="button" data-step="1" aria-label="Next chapter screenshot" hidden>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+            </button>
+          </figcaption>
+        </figure>
+      </article>
     </section>
 
     <section class="feature-section" id="station-collection" aria-labelledby="station-collection-title">
@@ -160,90 +245,6 @@
       </figure>
     </section>
 
-    <section class="collection" aria-labelledby="collection-title">
-      <header class="section-heading">
-        <p class="eyebrow">Your audio collection</p>
-        <h2 id="collection-title">Play the files you keep.</h2>
-      </header>
-      <div class="features">
-        <article class="feature" id="mp3">
-          <div class="feature-copy">
-            <p class="eyebrow">02 / MP3</p>
-            <h3>Play your own MP3s offline</h3>
-            <p>Choose <strong>Add files</strong> to add MP3s from your phone and play them offline.</p>
-            <p class="drive-copy"><strong>Low on storage?</strong> Choose <strong>Add link</strong> and paste a Google Drive link to an MP3 file or a folder. Sonacella builds a playlist from the folder's MP3s, so you can stream your collection over Wi-Fi without copying it to your phone.</p>
-            <p class="drive-detail">Use a folder shared with anyone who has the link, with downloads allowed. Tap <strong>Refresh</strong> after adding new files to your Google Drive folder.</p>
-          </div>
-          <figure class="gallery" data-gallery aria-label="MP3 screenshots">
-            <div class="gallery-slides">
-              <a class="screen is-current" href="assets/mp3.png" data-caption="Local playlist">
-                <img src="assets/mp3.png" width="1080" height="1920" alt="A local MP3 playlist with the current track's playback position">
-              </a>
-              <a class="screen" href="assets/mp3-menu.png" data-caption="Track menu" inert>
-                <img src="assets/mp3-menu.png" width="1080" height="1920" alt="The local MP3 track menu with options to locate the file, remove it from the playlist, or move it">
-              </a>
-              <a class="screen" href="assets/mp3-app-menu.png" data-caption="MP3 menu" inert>
-                <img src="assets/mp3-app-menu.png" width="1080" height="1920" alt="The MP3 menu showing Add link, Add files, Add timing file, and Playlists">
-              </a>
-              <a class="screen" href="assets/mp3-add-link.png" data-caption="Add link" inert>
-                <img src="assets/mp3-add-link.png" width="1080" height="1920" alt="The Add link dialog with a URL field and instructions for sharing a Google Drive file or folder">
-              </a>
-              <a class="screen" href="assets/drive-playlist.png" data-caption="Drive playlist" inert>
-                <img src="assets/drive-playlist.png" width="720" height="1600" alt="An MP3 playlist containing Google Drive and local files">
-              </a>
-            </div>
-            <figcaption class="gallery-controls">
-              <button type="button" data-step="-1" aria-label="Previous MP3 screenshot" hidden>
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-              </button>
-              <span class="gallery-caption" data-caption-live aria-live="polite">Local playlist</span>
-              <button type="button" data-step="1" aria-label="Next MP3 screenshot" hidden>
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-              </button>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="feature chapters" id="chapters">
-          <div class="feature-copy">
-            <p class="eyebrow">03 / Chapters</p>
-            <h3>Find your place in a long recording</h3>
-            <p>Add a matching timing file to split a long MP3 into named chapters. Jump straight to a song or section and resume from your saved position. <a href="chapters/">Learn how to split a long MP3 into tracks.</a></p>
-            <p class="drive-copy">In <strong>Playlists</strong>, choose <strong>Import Drive folder</strong> and paste a shared Google Drive folder link. Sonacella automatically creates a playlist from its MP3s and splits recordings into chapters when matching timing files are available.</p>
-          </div>
-          <figure class="gallery" data-gallery aria-label="Chapter screenshots">
-            <div class="gallery-slides">
-              <a class="screen is-current" href="assets/chapters.png" data-caption="Chapter list">
-                <img src="assets/chapters.png" width="1080" height="1920" alt="A long recording in Sonacella with named chapters and their durations">
-              </a>
-              <a class="screen" href="assets/source-card.png" data-caption="Chapter details" inert>
-                <img src="assets/source-card.png" width="1080" height="1920" alt="A chapter card showing its source and start time">
-              </a>
-              <a class="screen" href="assets/multitrack-menu.png" data-caption="Track menu" inert>
-                <img src="assets/multitrack-menu.png" width="1080" height="1920" alt="A chapter track menu with options to view details, edit the shared MP3 link, remove the track, or reorder it">
-              </a>
-              <a class="screen" href="assets/multitrack-edit-link.png" data-caption="Edit MP3 link" inert>
-                <img src="assets/multitrack-edit-link.png" width="1080" height="1920" alt="The Edit MP3 link dialog explaining that replacing the source audio updates all tracks from that source">
-              </a>
-              <a class="screen" href="assets/playlist-picker.png" data-caption="Choose a playlist" inert>
-                <img src="assets/playlist-picker.png" width="1080" height="1920" alt="The playlist picker with track counts and the Import Drive folder button">
-              </a>
-              <a class="screen" href="assets/drive-folder-import.png" data-caption="Import Drive folder" inert>
-                <img src="assets/drive-folder-import.png" width="1080" height="1920" alt="The Google Drive folder import dialog with a field for the shared folder link">
-              </a>
-            </div>
-            <figcaption class="gallery-controls">
-              <button type="button" data-step="-1" aria-label="Previous chapter screenshot" hidden>
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-              </button>
-              <span class="gallery-caption" data-caption-live aria-live="polite">Chapter list</span>
-              <button type="button" data-step="1" aria-label="Next chapter screenshot" hidden>
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
-              </button>
-            </figcaption>
-          </figure>
-        </article>
-      </div>
-    </section>
     <section class="collection" id="station-cards" aria-labelledby="station-cards-title">
       <header class="section-heading">
         <p class="eyebrow">For Microsoft Edge</p>
@@ -264,18 +265,18 @@
       <p>QR scanning requires Sonacella 1.0.9 or later for Android; check Google Play availability. Full catalog import replaces the radio list, so back it up first. Some station websites are unsupported, and a verified sample does not guarantee future availability.</p>
       <p><a href="station-cards/privacy.html">Station Cards privacy policy</a></p>
     </section>
-    <section class="collection" id="releases" aria-labelledby="releases-title">
+    <section class="collection" id="releases" aria-labelledby="releases-title" data-carousel>
       <header class="section-heading">
         <p class="eyebrow">What's new</p>
         <h2 id="releases-title">Releases</h2>
       </header>
       <p class="release-download"><a href="https://play.google.com/store/apps/details?id=io.github.miphorez.sonacella">Get the latest Sonacella on Google Play</a></p>
-      <div class="release-controls" data-release-controls hidden>
-        <button type="button" data-release-step="-1" aria-label="Newer release" disabled><span aria-hidden="true">←</span> Newer</button>
-        <p class="release-status" data-release-status role="status" aria-atomic="true"></p>
-        <button type="button" data-release-step="1" aria-label="Older release">Older <span aria-hidden="true">→</span></button>
+      <div class="carousel-controls" data-carousel-controls hidden>
+        <button type="button" data-carousel-step="-1" aria-label="Newer release" disabled><span aria-hidden="true">←</span> Newer</button>
+        <p class="carousel-status" data-carousel-status role="status" aria-atomic="true"></p>
+        <button type="button" data-carousel-step="1" aria-label="Older release">Older <span aria-hidden="true">→</span></button>
       </div>
-      <article class="release-entry release-entry-with-video" id="release-1-0-11" aria-labelledby="release-1-0-11-title">
+      <article class="release-entry release-entry-with-video" id="release-1-0-11" aria-labelledby="release-1-0-11-title" data-carousel-slide>
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-11-title">Sonacella 1.0.11</p>
           <h3>Set a timer. Drift off.</h3>
@@ -294,7 +295,7 @@
           <figcaption>One more song… then sleep. <a href="https://www.youtube.com/shorts/qIp5XpzqfZI" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
         </figure>
       </article>
-      <article class="release-entry release-entry-with-video" id="release-1-0-9" aria-labelledby="release-1-0-9-title">
+      <article class="release-entry release-entry-with-video" id="release-1-0-9" aria-labelledby="release-1-0-9-title" data-carousel-slide>
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-9-title">Sonacella 1.0.9</p>
           <h3>From a station website to your radio list</h3>
@@ -314,7 +315,7 @@
           <figcaption>Add stations with the Edge extension and a QR code. <a href="https://www.youtube.com/shorts/j-g4IMO2Xp0" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
         </figure>
       </article>
-      <article class="release-entry release-entry-text" id="station-cards-release-0-1-4" aria-labelledby="station-cards-release-0-1-4-title">
+      <article class="release-entry release-entry-text" id="station-cards-release-0-1-4" aria-labelledby="station-cards-release-0-1-4-title" data-carousel-slide>
         <div class="release-copy">
           <p class="eyebrow" id="station-cards-release-0-1-4-title">Station Cards 0.1.4 · Edge extension</p>
           <h3>Found a station? Take it with you.</h3>
@@ -324,7 +325,7 @@
           <p class="requirements">Published on GitHub · <time datetime="2026-11-12">November 12, 2026</time> · Browser extension release</p>
         </div>
       </article>
-      <article class="release-entry release-entry-with-video" id="release-1-0-8" aria-labelledby="release-1-0-8-title">
+      <article class="release-entry release-entry-with-video" id="release-1-0-8" aria-labelledby="release-1-0-8-title" data-carousel-slide>
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-8-title">Sonacella 1.0.8</p>
           <h3>Good radio is worth sharing</h3>
@@ -343,7 +344,7 @@
           <figcaption>Good radio is worth sharing. <a href="https://www.youtube.com/shorts/RhJs4jxLqas" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
         </figure>
       </article>
-      <article class="release-entry release-entry-with-video" id="release-1-0-7" aria-labelledby="release-1-0-7-title">
+      <article class="release-entry release-entry-with-video" id="release-1-0-7" aria-labelledby="release-1-0-7-title" data-carousel-slide>
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-7-title">Sonacella 1.0.7</p>
           <h3>Send a radio station to your other devices</h3>
