@@ -26,11 +26,16 @@ Android app policy at `privacy.html`.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
 - The independent `#station-collection` section after the feature carousel presents the approved
-  30-second "Pick a card. Find your sound." promo (`OEMSV_mZwo4`), links to the
-  Instagram station cards and explains QR image import. Its local portrait poster
+  30-second "Pick a card. Find your sound." promo (`OEMSV_mZwo4`) and links to the
+  station collections and Instagram. Its local portrait poster
   is extracted at 24.5 seconds from the approved final video. It shares the existing
   click-to-play player and YouTube fallback; it is separate from release news and
   the browser extension installation instructions.
+- The `#station-cards` menu link introduces clipboard import and points to
+  `discover/`. The collections page shows one theme and one station at a time.
+  Each card exposes a single-station catalog JSON and an optional QR for the
+  same station. Keep the JSON and QR in sync. The Edge extension instructions
+  are at `discover/#extension`.
 - `carousel.js` drives the feature and release carousels. The release carousel
   shows one release at a time, newest first, with Newer/Older buttons,
   a live position/version label and horizontal touch swipes. Navigation stops at
