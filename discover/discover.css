@@ -48,7 +48,7 @@
 .discovery-card:target { border-color: var(--gold); }
 .discovery-card h4 { margin: 0; font-size: 21px; line-height: 1.25; }
 .station-provider { margin: 6px 0; font-size: 14px; overflow-wrap: anywhere; }
-.station-description, .station-provider-note { color: var(--muted); }
+.station-description, .station-provider-note { margin-bottom: 12px; color: var(--muted); }
 .station-provider-note { font-size: .9rem; }
 .discovery-card label { display: block; margin-bottom: 6px; font-size: .875rem; }
 .discovery-card textarea {
@@ -67,7 +67,7 @@
 .discovery-card textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .station-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .station-card-actions button { min-height: 44px; cursor: pointer; }
-.station-card-actions .play-button { border: 0; }
+.station-card-actions .play-button { margin: 0; border: 0; }
 .station-card-actions [hidden] { display: none; }
 .station-qr-button {
   display: inline-flex;
