@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Sonacella radio stations and copy a station card to add it to the Android app.">
+  <meta name="theme-color" content="#111a15">
+  <title>Discover your next station | Sonacella</title>
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="discover.css?v=card-preview">
+  <script src="../carousel.js?v=station-themes" defer></script>
+  <script src="discover.js?v=card-preview" defer></script>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand wordmark" href="../">
+      <span class="brand-name">Sonacella</span>
+      <span class="brand-slogan">All your music, inside.</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="../#station-cards">Sonacella home</a>
+      <a href="#extension">Edge extension</a>
+      <a href="https://www.instagram.com/sonacella.app/">Instagram</a>
+    </nav>
+  </header>
+
+  <main class="wrap discover">
+    <header class="discover-heading">
+      <h1>Discover your next station</h1>
+      <p class="lede">Copy a station card to add it to Sonacella on Android. You can read the full card text before you copy it.</p>
+    </header>
+    <section class="discover-guide" aria-labelledby="import-title">
+      <h2 id="import-title">Add a station from your clipboard</h2>
+      <ol>
+        <li>Choose <strong>Copy station card</strong> on any station below.</li>
+        <li>In Sonacella, open <strong>RADIO &rarr; Add stations &rarr; From clipboard</strong>.</li>
+        <li>Review the preview and tap <strong>Add shared station</strong>.</li>
+      </ol>
+      <p>If copying is blocked, select and copy the card text by hand, or open this page in your browser.</p>
+      <p class="discover-qr-note"><strong>About these QR codes.</strong> They contain only station card text, including the stream address. Choose <strong>Show QR</strong> and scan with Sonacella. The station card opens inside the app. Adding it requires your confirmation.</p>
+    </section>
+    <section class="station-themes" id="themes" aria-labelledby="themes-title" data-carousel>
+      <h2 id="themes-title">Choose a theme</h2>
+          <div class="carousel-controls" data-carousel-controls hidden>
+            <button type="button" data-carousel-step="-1">Previous theme</button>
+            <span class="carousel-status" data-carousel-status aria-live="polite"></span>
+            <button type="button" data-carousel-step="1">Next theme</button>
+          </div>
+        <div class="station-theme" id="classic-theme" data-carousel-slide data-carousel-target="classic-stations">
+          <h3 data-carousel-title>Classical, jazz and relax</h3>
+          <p>Mozart, Bach, solo piano, dreamlike classical music and smooth jazz.</p>
+        </div>
+        <div class="station-theme" id="christmas-theme" data-carousel-slide data-carousel-target="christmas-stations">
+          <h3 data-carousel-title>Christmas radio</h3>
+          <p>Country Christmas songs, festive instrumentals and laid-back holiday radio.</p>
+        </div>
+<!-- THEMES -->
+    </section>
+      <section class="station-shelf" id="classic-stations" aria-label="Classical, jazz and relax stations" data-carousel>
+          <div class="carousel-controls" data-carousel-controls hidden>
+            <button type="button" data-carousel-step="-1">Previous station</button>
+            <span class="carousel-status" data-carousel-status aria-live="polite"></span>
+            <button type="button" data-carousel-step="1">Next station</button>
+          </div>
+            <article class="discovery-card" id="mozart" aria-labelledby="mozart-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="mozart-title" data-carousel-title>Best of Wolfgang Amadeus Mozart</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">A Klassik Radio channel dedicated to the music of Wolfgang Amadeus Mozart.</p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/wolfgang-amadeus-mozart/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="mozart-text">Station card text</label>
+              <textarea id="mozart-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Best of Wolfgang Amadeus Mozart",
+      "url": "https://stream.klassikradio.de/mozart/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/mozart-920x920pxjpg-6a5e0a23ec2ec933874090.jpg",
+      "description": "A Klassik Radio channel dedicated to the music of Wolfgang Amadeus Mozart.",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/wolfgang-amadeus-mozart/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Best of Wolfgang Amadeus Mozart</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="mozart-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Best of Wolfgang Amadeus Mozart</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="mozart-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/mozart.png" alt="Sonacella station QR for Best of Wolfgang Amadeus Mozart" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/mozart.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/mozart.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="baroque" aria-labelledby="baroque-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="baroque-title" data-carousel-title>Best of Barock</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/barock-musik/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="baroque-text">Station card text</label>
+              <textarea id="baroque-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Best of Barock",
+      "url": "https://stream.klassikradio.de/barock/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/krs-bestofbarock-920-67a9cff97b8cc195264752.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/barock-musik/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Best of Barock</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="baroque-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Best of Barock</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="baroque-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/baroque.png" alt="Sonacella station QR for Best of Barock" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/baroque.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/baroque.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="bach" aria-labelledby="bach-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="bach-title" data-carousel-title>Best of Johann Sebastian Bach</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/johann-sebastian-bach/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="bach-text">Station card text</label>
+              <textarea id="bach-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Best of Johann Sebastian Bach",
+      "url": "https://stream.klassikradio.de/purebach/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/bach-920x920px-6a5e0955c658e795390518.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/johann-sebastian-bach/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Best of Johann Sebastian Bach</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="bach-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Best of Johann Sebastian Bach</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="bach-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/bach.png" alt="Sonacella station QR for Best of Johann Sebastian Bach" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/bach.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/bach.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="piano" aria-labelledby="piano-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="piano-title" data-carousel-title>Klavier Solo</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/piano-musik/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="piano-text">Station card text</label>
+              <textarea id="piano-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Klavier Solo",
+      "url": "https://stream.klassikradio.de/piano/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/klavier-solo-920-67bedf7c4e9d6166093912.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/piano-musik/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Klavier Solo</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="piano-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Klavier Solo</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="piano-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/piano.png" alt="Sonacella station QR for Klavier Solo" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/piano.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/piano.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="new-classics" aria-labelledby="new-classics-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="new-classics-title" data-carousel-title>New Classics</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/neoklassik/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="new-classics-text">Station card text</label>
+              <textarea id="new-classics-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "New Classics",
+      "url": "https://stream.klassikradio.de/newclassics/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/new-classics-920-65d3052076d7f819461254.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/neoklassik/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for New Classics</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="new-classics-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for New Classics</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="new-classics-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/new-classics.png" alt="Sonacella station QR for New Classics" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/new-classics.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/new-classics.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="dreams" aria-labelledby="dreams-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="dreams-title" data-carousel-title>Klassik Dreams</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/klassik-dreams/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="dreams-text">Station card text</label>
+              <textarea id="dreams-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Klassik Dreams",
+      "url": "https://stream.klassikradio.de/dreams/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/klassik-dreams-920-6746f46c41162682057086.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/klassik-dreams/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Klassik Dreams</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="dreams-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Klassik Dreams</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="dreams-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/dreams.png" alt="Sonacella station QR for Klassik Dreams" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/dreams.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/dreams.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="smooth-jazz" aria-labelledby="smooth-jazz-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="smooth-jazz-title" data-carousel-title>Smooth Jazz</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/jazz-musik-hoeren/smooth-jazz/">klassikradio.de</a></p>
+                </div>
+              </div>
+              <label for="smooth-jazz-text">Station card text</label>
+              <textarea id="smooth-jazz-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Smooth Jazz",
+      "url": "https://stream.klassikradio.de/smooth/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/krs-smoothjazz-920-6ae32b046f337139408433.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/jazz-musik-hoeren/smooth-jazz/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Smooth Jazz</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="smooth-jazz-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Smooth Jazz</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="smooth-jazz-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/smooth-jazz.png" alt="Sonacella station QR for Smooth Jazz" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/smooth-jazz.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/smooth-jazz.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="classic-radio-non-stop" aria-labelledby="classic-radio-non-stop-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="classic-radio-non-stop-title" data-carousel-title>CLASSIC RADIO NON STOP</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Ancient, baroque, classical, romantic and contemporary music.</p>
+                  <p class="station-provider"><a href="https://classicradiononstop.fr/stream-classical-music-at-anytime-and-anywhere-classic-radio-non-stop.html">classicradiononstop.fr</a></p>
+                </div>
+              </div>
+              <label for="classic-radio-non-stop-text">Station card text</label>
+              <textarea id="classic-radio-non-stop-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "CLASSIC RADIO NON STOP",
+      "url": "https://smeuh.org:8443/classicradiononstop.mp3",
+      "imageUrl": "https://classicradiononstop.fr/_media/img/small/neutral-minimalist-modern-classical-music-youtube-video.png",
+      "description": "Ancient, baroque, classical, romantic and contemporary music.",
+      "website": "https://classicradiononstop.fr/stream-classical-music-at-anytime-and-anywhere-classic-radio-non-stop.html"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for CLASSIC RADIO NON STOP</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="classic-radio-non-stop-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for CLASSIC RADIO NON STOP</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="classic-radio-non-stop-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/classic/classic-radio-non-stop.png" alt="Sonacella station QR for CLASSIC RADIO NON STOP" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/classic/classic-radio-non-stop.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/classic/classic-radio-non-stop.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+      </section>
+      <section class="station-shelf" id="christmas-stations" aria-label="Christmas radio stations" data-carousel>
+          <div class="carousel-controls" data-carousel-controls hidden>
+            <button type="button" data-carousel-step="-1">Previous station</button>
+            <span class="carousel-status" data-carousel-status aria-live="polite"></span>
+            <button type="button" data-carousel-step="1">Next station</button>
+          </div>
+            <article class="discovery-card" id="1000-christmas" aria-labelledby="1000-christmas-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="1000-christmas-title" data-carousel-title>1000 Christmas</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">An online radio station playing Christmas music around the clock, all year long.</p>
+                  <p class="station-provider"><a href="https://www.1000christmas.com/">1000christmas.com</a></p>
+                </div>
+              </div>
+              <label for="1000-christmas-text">Station card text</label>
+              <textarea id="1000-christmas-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "1000 Christmas",
+      "url": "https://ais-sa2.cdnstream1.com/2553_128.mp3",
+      "imageUrl": "https://1000christmas.com/images/1000christmas_500x500.png",
+      "description": "An online radio station playing Christmas music around the clock, all year long.",
+      "website": "https://www.1000christmas.com/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for 1000 Christmas</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="1000-christmas-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for 1000 Christmas</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="1000-christmas-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/1000-christmas.png" alt="Sonacella station QR for 1000 Christmas" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/1000-christmas.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/1000-christmas.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="christmas-country" aria-labelledby="christmas-country-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-country-title" data-carousel-title>Christmas Country</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Christmas classics and holiday favorites performed by country artists.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/country-christmas/">gotradio.com</a></p>
+                </div>
+              </div>
+              <label for="christmas-country-text">Station card text</label>
+              <textarea id="christmas-country-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Christmas Country",
+      "url": "https://pureplay.cdnstream1.com/6031_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/04/GotRadio_ChristmasCountry_512.png",
+      "description": "Christmas classics and holiday favorites performed by country artists.",
+      "website": "https://gotradio.com/radiochannel/country-christmas/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Christmas Country</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="christmas-country-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Christmas Country</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="christmas-country-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/christmas-country.png" alt="Sonacella station QR for Christmas Country" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/christmas-country.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/christmas-country.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="christmas-celebration" aria-labelledby="christmas-celebration-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-celebration-title" data-carousel-title>Christmas Celebration</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">A seasonal mix of favorite Christmas songs.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-celebration/">gotradio.com</a></p>
+                </div>
+              </div>
+              <label for="christmas-celebration-text">Station card text</label>
+              <textarea id="christmas-celebration-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Christmas Celebration",
+      "url": "https://pureplay.cdnstream1.com/6020_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/04/GotRadio_Christmas_Celebration_600x600.png",
+      "description": "A seasonal mix of favorite Christmas songs.",
+      "website": "https://gotradio.com/radiochannel/christmas-celebration/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Christmas Celebration</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="christmas-celebration-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Christmas Celebration</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="christmas-celebration-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/christmas-celebration.png" alt="Sonacella station QR for Christmas Celebration" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/christmas-celebration.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/christmas-celebration.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="christmas-instrumentals" aria-labelledby="christmas-instrumentals-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-instrumentals-title" data-carousel-title>Christmas Instrumentals</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Instrumental Christmas music for background listening.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-instrumentals/">gotradio.com</a></p>
+                </div>
+              </div>
+              <label for="christmas-instrumentals-text">Station card text</label>
+              <textarea id="christmas-instrumentals-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Christmas Instrumentals",
+      "url": "https://pureplay.cdnstream1.com/6061_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/11/GotRadio_Christmas_Instrumentals_600x600.png",
+      "description": "Instrumental Christmas music for background listening.",
+      "website": "https://gotradio.com/radiochannel/christmas-instrumentals/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Christmas Instrumentals</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="christmas-instrumentals-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Christmas Instrumentals</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="christmas-instrumentals-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/christmas-instrumentals.png" alt="Sonacella station QR for Christmas Instrumentals" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/christmas-instrumentals.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/christmas-instrumentals.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="that-christmas-channel" aria-labelledby="that-christmas-channel-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="that-christmas-channel-title" data-carousel-title>That Christmas Channel</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Year-round Christmas radio with traditional carols, contemporary hits, country holiday songs, and winter favorites.</p>
+                  <p class="station-provider"><a href="https://thatchristmaschannel.com/">thatchristmaschannel.com</a></p>
+                </div>
+              </div>
+              <label for="that-christmas-channel-text">Station card text</label>
+              <textarea id="that-christmas-channel-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "That Christmas Channel",
+      "url": "https://ais-sa5.cdnstream1.com/b55667_128mp3",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/fblogo/7/99657.v2.png",
+      "description": "Year-round Christmas radio with traditional carols, contemporary hits, country holiday songs, and winter favorites.",
+      "website": "https://thatchristmaschannel.com/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for That Christmas Channel</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="that-christmas-channel-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for That Christmas Channel</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="that-christmas-channel-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/that-christmas-channel.png" alt="Sonacella station QR for That Christmas Channel" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/that-christmas-channel.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/that-christmas-channel.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="christmas-lounge" aria-labelledby="christmas-lounge-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-lounge-title" data-carousel-title>Christmas Lounge</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Quiet Christmas jazz, crooners, orchestras, and strings, streaming around the clock from Stupid Potato.</p>
+                  <p class="station-provider"><a href="https://stupidpotato.com/christmas-lounge/">stupidpotato.com</a></p>
+                  <p class="station-provider-note">Stupid Potato allows personal, non-commercial listening. Copying or republishing its original work requires permission. <a href="https://stupidpotato.com/terms/">Provider terms</a></p>
+                </div>
+              </div>
+              <label for="christmas-lounge-text">Station card text</label>
+              <textarea id="christmas-lounge-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Christmas Lounge",
+      "url": "https://stupidpotato.com/christmas-lounge/live",
+      "imageUrl": "https://stupidpotato.com/christmas-lounge/og.jpg?v=b39ec63c",
+      "description": "Quiet Christmas jazz, crooners, orchestras, and strings, streaming around the clock from Stupid Potato.",
+      "website": "https://stupidpotato.com/christmas-lounge/",
+      "terms": "Stupid Potato allows personal, non-commercial listening. Copying or republishing its original work requires permission.",
+      "termsUrl": "https://stupidpotato.com/terms/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Christmas Lounge</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="christmas-lounge-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Christmas Lounge</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="christmas-lounge-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/christmas-lounge.png" alt="Sonacella station QR for Christmas Lounge" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/christmas-lounge.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/christmas-lounge.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+            <article class="discovery-card" id="santa-105" aria-labelledby="santa-105-title" data-carousel-slide>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="santa-105-title" data-carousel-title>Santa 105</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">An online radio station playing Christmas songs and holiday favorites year-round.</p>
+                  <p class="station-provider"><a href="https://sunny105radio.com/santa-105/">sunny105radio.com</a></p>
+                </div>
+              </div>
+              <label for="santa-105-text">Station card text</label>
+              <textarea id="santa-105-text" rows="5" readonly spellcheck="false" wrap="soft">
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Santa 105",
+      "url": "https://streaming.atlanticsunrisehosting.com/proxy/santa105/stream",
+      "imageUrl": "https://sunny105radio.com/wp-content/themes/sunny105/assets/santa-logo.png",
+      "description": "An online radio station playing Christmas songs and holiday favorites year-round.",
+      "website": "https://sunny105radio.com/santa-105/"
+    }
+  ]
+}</textarea>
+              <div class="station-card-actions">
+                <button class="play-button" type="button" data-copy-card hidden>Copy station card<span class="visually-hidden"> for Santa 105</span></button>
+                <button type="button" class="station-qr-button" data-toggle-qr aria-expanded="false" aria-controls="santa-105-qr" hidden><span class="qr-icon" aria-hidden="true"></span><span data-qr-label>Show QR</span><span class="visually-hidden"> for Santa 105</span></button>
+              </div>
+              <p class="station-copy-status" role="status"></p>
+              <div class="station-qr" id="santa-105-qr" hidden>
+                <p>Scan in Sonacella to preview this station. You choose whether to add it.</p>
+                <img src="../assets/discover/christmas/santa-105.png" alt="Sonacella station QR for Santa 105" width="240" height="240" loading="lazy">
+                <a href="../assets/discover/christmas/santa-105.png" download>Save QR image</a>
+              </div>
+              <noscript><p><a href="../assets/discover/christmas/santa-105.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
+            </article>
+      </section>
+<!-- STATION_SHELVES -->
+    <section class="collection" id="extension" aria-labelledby="station-cards-title">
+      <header class="section-heading">
+        <p class="eyebrow">For Microsoft Edge</p>
+        <h2 id="station-cards-title">A radio page. A station card.</h2>
+      </header>
+      <p class="lede">Found a radio station you want to keep? Sonacella Station Cards checks a supported public station page and prepares its stream, artwork and details for review. Export verified cards as JSON or a QR image generated in your browser.</p>
+      <p><a class="play-button" href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip">Download Station Cards 0.1.4</a></p>
+      <p class="extension-links"><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">GitHub release</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/INSTALL.md">Full installation and update guide</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip.sha256">SHA-256 checksum</a></p>
+      <h3>Install in Edge</h3>
+      <ol>
+        <li>Download the ZIP, verify its SHA-256 and extract it to a permanent folder.</li>
+        <li>Open <strong>edge://extensions</strong> and turn on <strong>Developer mode</strong>.</li>
+        <li>Choose <strong>Load unpacked</strong>, then select the inner <strong>Sonacella-Station-Cards</strong> folder containing <strong>manifest.json</strong>.</li>
+        <li>Open a public HTTPS station page, choose <strong>Create station card</strong> in the extension and allow website checks when requested. Review the result before exporting.</li>
+      </ol>
+      <p>To update, download and verify the next user ZIP, replace the files in the same installed folder, then choose <strong>Reload</strong> on the existing extension. Keep the folder after installation. Updates are manual.</p>
+      <p class="requirements">Browser extension preview · Installed manually, outside Edge Add-ons · No Windows helper or extension account required</p>
+      <p>QR scanning requires Sonacella 1.0.9 or later for Android; check Google Play availability. Full catalog import replaces the radio list, so back it up first. Some station websites are unsupported, and a verified sample does not guarantee future availability.</p>
+      <p><a href="../station-cards/privacy.html">Station Cards privacy policy</a></p>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <p>Sonacella is an independent player. Stations and artwork belong to their respective providers. Stream availability and provider terms may vary.</p>
+  </footer>
+</body>
+</html>

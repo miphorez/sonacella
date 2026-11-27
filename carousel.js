@@ -1,5 +1,6 @@
 for (const carousel of document.querySelectorAll("[data-carousel]")) {
   const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+  const targets = slides.map((slide) => document.getElementById(slide.dataset.carouselTarget ?? ""));
   const controls = carousel.querySelector("[data-carousel-controls]");
   const status = carousel.querySelector("[data-carousel-status]");
   const previous = carousel.querySelector('[data-carousel-step="-1"]');
@@ -22,11 +23,16 @@ for (const carousel of document.querySelectorAll("[data-carousel]")) {
       }
       slide.hidden = hidden;
       slide.inert = hidden;
+      const target = targets[position];
+      if (target) {
+        target.hidden = hidden;
+        target.inert = hidden;
+      }
     });
     current = index;
     previous.disabled = current === 0;
     next.disabled = current === slides.length - 1;
-    const title = slides[current].querySelector(".eyebrow").textContent;
+    const title = slides[current].querySelector("[data-carousel-title], .eyebrow").textContent;
     status.textContent = `${current + 1} of ${slides.length} · ${title}`;
 
     const focusedStepDisabled = (focused === previous || focused === next) && focused.disabled;
@@ -37,7 +43,10 @@ for (const carousel of document.querySelectorAll("[data-carousel]")) {
   }
 
   function showHashSlide() {
-    const index = slides.findIndex((slide) => `#${slide.id}` === location.hash);
+    const hashTarget = document.getElementById(location.hash.slice(1));
+    const index = slides.findIndex((slide, position) =>
+      slide === hashTarget || (hashTarget && targets[position]?.contains(hashTarget))
+    );
     if (index >= 0 || location.hash === `#${carousel.id}`) {
       showSlide(Math.max(0, index));
       requestAnimationFrame(() => carousel.scrollIntoView({ block: "start" }));

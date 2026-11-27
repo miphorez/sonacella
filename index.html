@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=social-links">
+  <link rel="stylesheet" href="style.css?v=station-cards">
   <script src="gallery.js" defer></script>
   <script src="video.js?v=release-carousel" defer></script>
-  <script src="carousel.js" defer></script>
+  <script src="carousel.js?v=station-themes" defer></script>
 </head>
 <body>
   <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
@@ -256,12 +256,13 @@
     </section>
 
     <section class="feature-section" id="station-collection" aria-labelledby="station-collection-title">
-      <div class="feature-section-copy">
+      <div class="feature-section-copy" id="station-cards">
         <p class="eyebrow">Discover your next station</p>
         <h2 id="station-collection-title">Pick a card.<br>Find your sound.</h2>
-        <p class="lede">Music for your mood? Browse classical music, jazz and relaxing radio station cards on our Instagram.</p>
-        <p class="lede">Save a card's QR image, then open <strong>RADIO &rarr; Add stations &rarr; From QR code &rarr; Choose image</strong> in Sonacella on Android. Review the card and tap <strong>Add shared station</strong>.</p>
-        <a class="play-button" href="https://www.instagram.com/sonacella.app/">Browse station cards on Instagram</a>
+        <p class="lede">Browse the collections and copy a station card. In Sonacella, choose <strong>RADIO &rarr; Add stations &rarr; From clipboard</strong> to preview it. QR import is also available.</p>
+        <a class="play-button" href="discover/">Browse station cards</a>
+        <p><a href="https://www.instagram.com/sonacella.app/">Discover station cards on Instagram</a></p>
+        <p><a href="discover/#extension">Learn about the Station Cards extension</a></p>
         <p class="requirements">Sonacella is an independent player. Stations and artwork belong to their respective providers. Stream availability and provider terms may vary.</p>
       </div>
       <figure class="hero-video station-collection-video">
@@ -276,26 +277,6 @@
       </figure>
     </section>
 
-    <section class="collection" id="station-cards" aria-labelledby="station-cards-title">
-      <header class="section-heading">
-        <p class="eyebrow">For Microsoft Edge</p>
-        <h2 id="station-cards-title">A radio page. A station card.</h2>
-      </header>
-      <p class="lede">Found a radio station you want to keep? Sonacella Station Cards checks a supported public station page and prepares its stream, artwork and details for review. Export verified cards as JSON or a QR image generated in your browser.</p>
-      <p><a class="play-button" href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip">Download Station Cards 0.1.4</a></p>
-      <p><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">GitHub release</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/INSTALL.md">Full installation and update guide</a> · <a href="https://github.com/miphorez/sonacella/releases/download/station-cards-v0.1.4/Sonacella-Station-Cards-0.1.4-user.zip.sha256">SHA-256 checksum</a></p>
-      <h3>Install in Edge</h3>
-      <ol>
-        <li>Download the ZIP, verify its SHA-256 and extract it to a permanent folder.</li>
-        <li>Open <strong>edge://extensions</strong> and turn on <strong>Developer mode</strong>.</li>
-        <li>Choose <strong>Load unpacked</strong>, then select the inner <strong>Sonacella-Station-Cards</strong> folder containing <strong>manifest.json</strong>.</li>
-        <li>Open a public HTTPS station page, choose <strong>Create station card</strong> in the extension and allow website checks when requested. Review the result before exporting.</li>
-      </ol>
-      <p>To update, download and verify the next user ZIP, replace the files in the same installed folder, then choose <strong>Reload</strong> on the existing extension. Keep the folder after installation. Updates are manual.</p>
-      <p class="requirements">Browser extension preview · Installed manually, outside Edge Add-ons · No Windows helper or extension account required</p>
-      <p>QR scanning requires Sonacella 1.0.9 or later for Android; check Google Play availability. Full catalog import replaces the radio list, so back it up first. Some station websites are unsupported, and a verified sample does not guarantee future availability.</p>
-      <p><a href="station-cards/privacy.html">Station Cards privacy policy</a></p>
-    </section>
     <section class="collection" id="releases" aria-labelledby="releases-title" data-carousel>
       <header class="section-heading">
         <p class="eyebrow">What's new</p>
@@ -368,10 +349,10 @@
         <div class="release-copy">
           <p class="eyebrow" id="release-1-0-9-title">Sonacella 1.0.9</p>
           <h3>From a station website to your radio list</h3>
-          <p class="lede">Found a radio station on the web? Open its page in Microsoft Edge and use <a href="#station-cards">Sonacella Station Cards</a> to create a station card. Review the stream, artwork and details, then display its QR code.</p>
+          <p class="lede">Found a radio station on the web? Open its page in Microsoft Edge and use <a href="discover/#extension">Sonacella Station Cards</a> to create a station card. Review the stream, artwork and details, then display its QR code.</p>
           <p class="lede">In Sonacella, open <strong>Add stations → From QR code</strong>. Scan the code from your browser with the camera, or choose a saved QR image. Preview the station and confirm to add it to your list.</p>
           <p class="lede">You can also add copied station cards with <strong>From clipboard</strong>. Sonacella checks new audio sources before saving. Device sync and switching conditions now live together in <strong>Settings</strong>.</p>
-          <p class="requirements">Android app release · <time datetime="2026-11-12">November 12, 2026</time> · <a href="#station-cards">Get the Edge extension preview</a></p>
+          <p class="requirements">Android app release · <time datetime="2026-11-12">November 12, 2026</time> · <a href="discover/#extension">Get the Edge extension preview</a></p>
         </div>
         <figure class="release-video">
           <div class="video-frame video-frame-portrait" data-video="j-g4IMO2Xp0" data-video-title="Found a great radio station? Keep it in Sonacella.">
@@ -390,7 +371,7 @@
           <h3>Found a station? Take it with you.</h3>
           <p class="lede">The standalone Sonacella Station Cards preview is now available on GitHub. Turn a supported station website into a reviewed card with an audio source, artwork and details, then save JSON or a local QR image.</p>
           <p>Version 0.1.4 supports published HTTPS stream ports and Classic Radio Non Stop, alongside supported Klassik Radio channels. The download includes installation and manual-update instructions, with a separate SHA-256 file.</p>
-          <p><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">Get the GitHub preview</a> · <a href="#station-cards">How to install</a></p>
+          <p><a href="https://github.com/miphorez/sonacella/releases/tag/station-cards-v0.1.4">Get the GitHub preview</a> · <a href="discover/#extension">How to install</a></p>
           <p class="requirements">Published on GitHub · <time datetime="2026-11-12">November 12, 2026</time> · Browser extension release</p>
         </div>
       </article>
