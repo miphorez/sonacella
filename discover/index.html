@@ -8,9 +8,9 @@
   <title>Discover your next station | Sonacella</title>
   <link rel="icon" href="../assets/icon.png" type="image/png">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="discover.css?v=qr-note">
+  <link rel="stylesheet" href="discover.css?v=card-preview">
   <script src="../carousel.js?v=station-themes" defer></script>
-  <script src="discover.js" defer></script>
+  <script src="discover.js?v=card-preview" defer></script>
 </head>
 <body>
   <header class="site-header wrap">
@@ -64,9 +64,14 @@
             <button type="button" data-carousel-step="1">Next station</button>
           </div>
             <article class="discovery-card" id="mozart" aria-labelledby="mozart-title" data-carousel-slide>
-              <h4 id="mozart-title" data-carousel-title>Best of Wolfgang Amadeus Mozart</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/wolfgang-amadeus-mozart/">klassikradio.de</a></p>
-              <p class="station-description">A Klassik Radio channel dedicated to the music of Wolfgang Amadeus Mozart.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="mozart-title" data-carousel-title>Best of Wolfgang Amadeus Mozart</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">A Klassik Radio channel dedicated to the music of Wolfgang Amadeus Mozart.</p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/wolfgang-amadeus-mozart/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="mozart-text">Station card text</label>
               <textarea id="mozart-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -94,9 +99,14 @@
               <noscript><p><a href="../assets/discover/classic/mozart.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="baroque" aria-labelledby="baroque-title" data-carousel-slide>
-              <h4 id="baroque-title" data-carousel-title>Best of Barock</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/barock-musik/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="baroque-title" data-carousel-title>Best of Barock</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/barock-musik/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="baroque-text">Station card text</label>
               <textarea id="baroque-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -123,9 +133,14 @@
               <noscript><p><a href="../assets/discover/classic/baroque.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="bach" aria-labelledby="bach-title" data-carousel-slide>
-              <h4 id="bach-title" data-carousel-title>Best of Johann Sebastian Bach</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/johann-sebastian-bach/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="bach-title" data-carousel-title>Best of Johann Sebastian Bach</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/johann-sebastian-bach/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="bach-text">Station card text</label>
               <textarea id="bach-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -152,9 +167,14 @@
               <noscript><p><a href="../assets/discover/classic/bach.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="piano" aria-labelledby="piano-title" data-carousel-slide>
-              <h4 id="piano-title" data-carousel-title>Klavier Solo</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/piano-musik/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="piano-title" data-carousel-title>Klavier Solo</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/piano-musik/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="piano-text">Station card text</label>
               <textarea id="piano-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -181,9 +201,14 @@
               <noscript><p><a href="../assets/discover/classic/piano.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="new-classics" aria-labelledby="new-classics-title" data-carousel-slide>
-              <h4 id="new-classics-title" data-carousel-title>New Classics</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/neoklassik/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="new-classics-title" data-carousel-title>New Classics</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/neoklassik/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="new-classics-text">Station card text</label>
               <textarea id="new-classics-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -210,9 +235,14 @@
               <noscript><p><a href="../assets/discover/classic/new-classics.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="dreams" aria-labelledby="dreams-title" data-carousel-slide>
-              <h4 id="dreams-title" data-carousel-title>Klassik Dreams</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/klassik-dreams/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="dreams-title" data-carousel-title>Klassik Dreams</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/klassik-dreams/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="dreams-text">Station card text</label>
               <textarea id="dreams-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -239,9 +269,14 @@
               <noscript><p><a href="../assets/discover/classic/dreams.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="smooth-jazz" aria-labelledby="smooth-jazz-title" data-carousel-slide>
-              <h4 id="smooth-jazz-title" data-carousel-title>Smooth Jazz</h4>
-              <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/jazz-musik-hoeren/smooth-jazz/">klassikradio.de</a></p>
-              <p class="station-description"></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="smooth-jazz-title" data-carousel-title>Smooth Jazz</h4>
+                <div class="station-preview-body">
+                  <p class="station-description"></p>
+                  <p class="station-provider"><a href="https://www.klassikradio.de/klassik-radio-plus/jazz-musik-hoeren/smooth-jazz/">klassikradio.de</a></p>
+                </div>
+              </div>
               <label for="smooth-jazz-text">Station card text</label>
               <textarea id="smooth-jazz-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -268,9 +303,14 @@
               <noscript><p><a href="../assets/discover/classic/smooth-jazz.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="classic-radio-non-stop" aria-labelledby="classic-radio-non-stop-title" data-carousel-slide>
-              <h4 id="classic-radio-non-stop-title" data-carousel-title>CLASSIC RADIO NON STOP</h4>
-              <p class="station-provider"><a href="https://classicradiononstop.fr/stream-classical-music-at-anytime-and-anywhere-classic-radio-non-stop.html">classicradiononstop.fr</a></p>
-              <p class="station-description">Ancient, baroque, classical, romantic and contemporary music.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="classic-radio-non-stop-title" data-carousel-title>CLASSIC RADIO NON STOP</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Ancient, baroque, classical, romantic and contemporary music.</p>
+                  <p class="station-provider"><a href="https://classicradiononstop.fr/stream-classical-music-at-anytime-and-anywhere-classic-radio-non-stop.html">classicradiononstop.fr</a></p>
+                </div>
+              </div>
               <label for="classic-radio-non-stop-text">Station card text</label>
               <textarea id="classic-radio-non-stop-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -305,9 +345,14 @@
             <button type="button" data-carousel-step="1">Next station</button>
           </div>
             <article class="discovery-card" id="1000-christmas" aria-labelledby="1000-christmas-title" data-carousel-slide>
-              <h4 id="1000-christmas-title" data-carousel-title>1000 Christmas</h4>
-              <p class="station-provider"><a href="https://www.1000christmas.com/">1000christmas.com</a></p>
-              <p class="station-description">An online radio station playing Christmas music around the clock, all year long.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="1000-christmas-title" data-carousel-title>1000 Christmas</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">An online radio station playing Christmas music around the clock, all year long.</p>
+                  <p class="station-provider"><a href="https://www.1000christmas.com/">1000christmas.com</a></p>
+                </div>
+              </div>
               <label for="1000-christmas-text">Station card text</label>
               <textarea id="1000-christmas-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -335,9 +380,14 @@
               <noscript><p><a href="../assets/discover/christmas/1000-christmas.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="christmas-country" aria-labelledby="christmas-country-title" data-carousel-slide>
-              <h4 id="christmas-country-title" data-carousel-title>Christmas Country</h4>
-              <p class="station-provider"><a href="https://gotradio.com/radiochannel/country-christmas/">gotradio.com</a></p>
-              <p class="station-description">Christmas classics and holiday favorites performed by country artists.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-country-title" data-carousel-title>Christmas Country</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Christmas classics and holiday favorites performed by country artists.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/country-christmas/">gotradio.com</a></p>
+                </div>
+              </div>
               <label for="christmas-country-text">Station card text</label>
               <textarea id="christmas-country-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -365,9 +415,14 @@
               <noscript><p><a href="../assets/discover/christmas/christmas-country.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="christmas-celebration" aria-labelledby="christmas-celebration-title" data-carousel-slide>
-              <h4 id="christmas-celebration-title" data-carousel-title>Christmas Celebration</h4>
-              <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-celebration/">gotradio.com</a></p>
-              <p class="station-description">A seasonal mix of favorite Christmas songs.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-celebration-title" data-carousel-title>Christmas Celebration</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">A seasonal mix of favorite Christmas songs.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-celebration/">gotradio.com</a></p>
+                </div>
+              </div>
               <label for="christmas-celebration-text">Station card text</label>
               <textarea id="christmas-celebration-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -395,9 +450,14 @@
               <noscript><p><a href="../assets/discover/christmas/christmas-celebration.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="christmas-instrumentals" aria-labelledby="christmas-instrumentals-title" data-carousel-slide>
-              <h4 id="christmas-instrumentals-title" data-carousel-title>Christmas Instrumentals</h4>
-              <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-instrumentals/">gotradio.com</a></p>
-              <p class="station-description">Instrumental Christmas music for background listening.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-instrumentals-title" data-carousel-title>Christmas Instrumentals</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Instrumental Christmas music for background listening.</p>
+                  <p class="station-provider"><a href="https://gotradio.com/radiochannel/christmas-instrumentals/">gotradio.com</a></p>
+                </div>
+              </div>
               <label for="christmas-instrumentals-text">Station card text</label>
               <textarea id="christmas-instrumentals-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -425,9 +485,14 @@
               <noscript><p><a href="../assets/discover/christmas/christmas-instrumentals.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="that-christmas-channel" aria-labelledby="that-christmas-channel-title" data-carousel-slide>
-              <h4 id="that-christmas-channel-title" data-carousel-title>That Christmas Channel</h4>
-              <p class="station-provider"><a href="https://thatchristmaschannel.com/">thatchristmaschannel.com</a></p>
-              <p class="station-description">Year-round Christmas radio with traditional carols, contemporary hits, country holiday songs, and winter favorites.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="that-christmas-channel-title" data-carousel-title>That Christmas Channel</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Year-round Christmas radio with traditional carols, contemporary hits, country holiday songs, and winter favorites.</p>
+                  <p class="station-provider"><a href="https://thatchristmaschannel.com/">thatchristmaschannel.com</a></p>
+                </div>
+              </div>
               <label for="that-christmas-channel-text">Station card text</label>
               <textarea id="that-christmas-channel-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -455,10 +520,15 @@
               <noscript><p><a href="../assets/discover/christmas/that-christmas-channel.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="christmas-lounge" aria-labelledby="christmas-lounge-title" data-carousel-slide>
-              <h4 id="christmas-lounge-title" data-carousel-title>Christmas Lounge</h4>
-              <p class="station-provider"><a href="https://stupidpotato.com/christmas-lounge/">stupidpotato.com</a></p>
-              <p class="station-description">Quiet Christmas jazz, crooners, orchestras, and strings, streaming around the clock from Stupid Potato.</p>
-              <p class="station-provider-note">Stupid Potato allows personal, non-commercial listening. Copying or republishing its original work requires permission. <a href="https://stupidpotato.com/terms/">Provider terms</a></p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="christmas-lounge-title" data-carousel-title>Christmas Lounge</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">Quiet Christmas jazz, crooners, orchestras, and strings, streaming around the clock from Stupid Potato.</p>
+                  <p class="station-provider"><a href="https://stupidpotato.com/christmas-lounge/">stupidpotato.com</a></p>
+                  <p class="station-provider-note">Stupid Potato allows personal, non-commercial listening. Copying or republishing its original work requires permission. <a href="https://stupidpotato.com/terms/">Provider terms</a></p>
+                </div>
+              </div>
               <label for="christmas-lounge-text">Station card text</label>
               <textarea id="christmas-lounge-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
@@ -488,9 +558,14 @@
               <noscript><p><a href="../assets/discover/christmas/christmas-lounge.png" download>Save QR image</a>. Open it in Sonacella to preview this station.</p></noscript>
             </article>
             <article class="discovery-card" id="santa-105" aria-labelledby="santa-105-title" data-carousel-slide>
-              <h4 id="santa-105-title" data-carousel-title>Santa 105</h4>
-              <p class="station-provider"><a href="https://sunny105radio.com/santa-105/">sunny105radio.com</a></p>
-              <p class="station-description">An online radio station playing Christmas songs and holiday favorites year-round.</p>
+              <div class="station-preview">
+                <p class="station-preview-label">Preview in Sonacella</p>
+                <h4 id="santa-105-title" data-carousel-title>Santa 105</h4>
+                <div class="station-preview-body">
+                  <p class="station-description">An online radio station playing Christmas songs and holiday favorites year-round.</p>
+                  <p class="station-provider"><a href="https://sunny105radio.com/santa-105/">sunny105radio.com</a></p>
+                </div>
+              </div>
               <label for="santa-105-text">Station card text</label>
               <textarea id="santa-105-text" rows="5" readonly spellcheck="false" wrap="soft">
 {
