@@ -8,9 +8,9 @@
   <title>Discover your next station | Sonacella</title>
   <link rel="icon" href="../assets/icon.png" type="image/png">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="discover.css?v=card-preview">
+  <link rel="stylesheet" href="discover.css?v=collection-export">
   <script src="../carousel.js?v=station-themes" defer></script>
-  <script src="discover.js?v=card-preview" defer></script>
+  <script src="discover.js?v=collection-export" defer></script>
 </head>
 <body>
   <header class="site-header wrap">
@@ -33,10 +33,11 @@
     <section class="discover-guide" aria-labelledby="import-title">
       <h2 id="import-title">Add a station from your clipboard</h2>
       <ol>
-        <li>Choose <strong>Copy station card</strong> on any station below.</li>
+        <li>Choose <strong>Copy station card</strong> on any station below, or <strong>Copy collection</strong> to copy the full collection.</li>
         <li>In Sonacella, open <strong>RADIO &rarr; Add stations &rarr; From clipboard</strong>.</li>
-        <li>Review the preview and tap <strong>Add shared station</strong>.</li>
+        <li>Review the preview and tap <strong>Add shared station</strong> or <strong>Add selected stations</strong>.</li>
       </ol>
+      <p>To use a downloaded collection, open or share its JSON file from your Android file manager with Sonacella.</p>
       <p>If copying is blocked, select and copy the card text by hand, or open this page in your browser.</p>
       <p class="discover-qr-note"><strong>About these QR codes.</strong> They contain only station card text, including the stream address. Choose <strong>Show QR</strong> and scan with Sonacella. The station card opens inside the app. Adding it requires your confirmation.</p>
     </section>
@@ -50,10 +51,22 @@
         <div class="station-theme" id="classic-theme" data-carousel-slide data-carousel-target="classic-stations">
           <h3 data-carousel-title>Classical, jazz and relax</h3>
           <p>Mozart, Bach, solo piano, dreamlike classical music and smooth jazz.</p>
+          <div class="station-card-actions">
+            <button class="play-button" type="button" data-copy-collection hidden>Copy collection</button>
+            <a class="station-download-button" href="collections/sonacella-classic-collection.json" download>Download collection</a>
+          </div>
+          <p class="station-copy-status" role="status"></p>
+          <textarea aria-label="Collection JSON" rows="5" readonly spellcheck="false" hidden></textarea>
         </div>
         <div class="station-theme" id="christmas-theme" data-carousel-slide data-carousel-target="christmas-stations">
           <h3 data-carousel-title>Christmas radio</h3>
           <p>Country Christmas songs, festive instrumentals and laid-back holiday radio.</p>
+          <div class="station-card-actions">
+            <button class="play-button" type="button" data-copy-collection hidden>Copy collection</button>
+            <a class="station-download-button" href="collections/sonacella-christmas-collection.json" download>Download collection</a>
+          </div>
+          <p class="station-copy-status" role="status"></p>
+          <textarea aria-label="Collection JSON" rows="5" readonly spellcheck="false" hidden></textarea>
         </div>
 <!-- THEMES -->
     </section>

@@ -19,7 +19,7 @@
 .discover-guide li + li { margin-top: 6px; }
 .discover-guide p { margin-block: 12px 0; color: var(--muted); }
 .discover strong { color: var(--pistachio); }
-.discover a:not(.play-button) { color: var(--gold); text-underline-offset: 3px; }
+.discover a:not(.play-button, .station-download-button) { color: var(--gold); text-underline-offset: 3px; }
 .discover-guide .discover-qr-note {
   margin-top: 16px;
   padding: 10px 14px;
@@ -95,7 +95,7 @@
 }
 .station-provider-note strong { display: block; margin-bottom: 3px; }
 .discovery-card label { display: block; margin-bottom: 6px; font-size: .875rem; }
-.discovery-card textarea {
+:is(.discovery-card, .station-theme) textarea {
   display: block;
   width: 100%;
   min-height: 120px;
@@ -108,7 +108,7 @@
   overflow-wrap: anywhere;
   resize: vertical;
 }
-.discovery-card textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+:is(.discovery-card, .station-theme) textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .station-card-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -116,7 +116,9 @@
   width: min(100%, 352px);
   margin-top: 12px;
 }
-.station-card-actions button {
+.station-theme textarea { margin-top: 10px; }
+.station-theme textarea[hidden] { display: none; }
+.station-card-actions :is(button, .station-download-button) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -130,15 +132,16 @@
   font-size: 15px;
   font-weight: 700;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 .station-card-actions [hidden] { display: none; }
-.station-card-actions .station-qr-button {
+.station-card-actions :is(.station-qr-button, .station-download-button) {
   border-color: #718073;
   background: var(--surface);
   color: var(--text);
 }
-.station-card-actions .station-qr-button:hover,
+.station-card-actions :is(.station-qr-button, .station-download-button):hover,
 .station-card-actions .station-qr-button[aria-expanded="true"] {
   border-color: var(--gold);
   color: var(--gold);
@@ -149,8 +152,8 @@
   height: 15px;
   background: url("qr-icon.png") center / contain no-repeat;
 }
-.station-copy-status { margin: 7px 0 0; color: var(--pistachio); font-size: .875rem; }
-.station-copy-status:empty { margin: 0; }
+.discover .station-copy-status { margin: 7px 0 0; color: var(--pistachio); font-size: .875rem; }
+.discover .station-copy-status:empty { margin: 0; }
 .station-qr { margin-top: 14px; }
 .station-qr p { margin: 0 0 10px; color: var(--muted); }
 .station-qr img { display: block; width: min(100%, 320px); height: auto; margin-bottom: 8px; image-rendering: pixelated; }

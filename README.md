@@ -35,7 +35,8 @@ Android app policy at `privacy.html`.
 - The `#station-cards` menu link introduces clipboard import and points to
   `discover/`. The collections page shows one theme and one station at a time.
   Each card exposes a single-station catalog JSON and an optional QR for the
-  same station. Keep the JSON and QR in sync. The Edge extension instructions
+  same station. Each theme can also copy or download the entire collection. Keep
+  the cards, QR codes and files in `discover/collections/` in sync. The Edge extension instructions
   are at `discover/#extension`.
 - `carousel.js` drives the feature and release carousels. The release carousel
   shows one release at a time, newest first, with Newer/Older buttons,

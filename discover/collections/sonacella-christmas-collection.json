@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "1000 Christmas",
+      "url": "https://ais-sa2.cdnstream1.com/2553_128.mp3",
+      "imageUrl": "https://1000christmas.com/images/1000christmas_500x500.png",
+      "description": "An online radio station playing Christmas music around the clock, all year long.",
+      "website": "https://www.1000christmas.com/"
+    },
+    {
+      "name": "Christmas Country",
+      "url": "https://pureplay.cdnstream1.com/6031_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/04/GotRadio_ChristmasCountry_512.png",
+      "description": "Christmas classics and holiday favorites performed by country artists.",
+      "website": "https://gotradio.com/radiochannel/country-christmas/"
+    },
+    {
+      "name": "Christmas Celebration",
+      "url": "https://pureplay.cdnstream1.com/6020_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/04/GotRadio_Christmas_Celebration_600x600.png",
+      "description": "A seasonal mix of favorite Christmas songs.",
+      "website": "https://gotradio.com/radiochannel/christmas-celebration/"
+    },
+    {
+      "name": "Christmas Instrumentals",
+      "url": "https://pureplay.cdnstream1.com/6061_64.aac",
+      "imageUrl": "https://gotradio.com/wp-content/uploads/2023/11/GotRadio_Christmas_Instrumentals_600x600.png",
+      "description": "Instrumental Christmas music for background listening.",
+      "website": "https://gotradio.com/radiochannel/christmas-instrumentals/"
+    },
+    {
+      "name": "That Christmas Channel",
+      "url": "https://ais-sa5.cdnstream1.com/b55667_128mp3",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/fblogo/7/99657.v2.png",
+      "description": "Year-round Christmas radio with traditional carols, contemporary hits, country holiday songs, and winter favorites.",
+      "website": "https://thatchristmaschannel.com/"
+    },
+    {
+      "name": "Christmas Lounge",
+      "url": "https://stupidpotato.com/christmas-lounge/live",
+      "imageUrl": "https://stupidpotato.com/christmas-lounge/og.jpg?v=b39ec63c",
+      "description": "Quiet Christmas jazz, crooners, orchestras, and strings, streaming around the clock from Stupid Potato.",
+      "website": "https://stupidpotato.com/christmas-lounge/",
+      "terms": "Stupid Potato allows personal, non-commercial listening. Copying or republishing its original work requires permission.",
+      "termsUrl": "https://stupidpotato.com/terms/"
+    },
+    {
+      "name": "Santa 105",
+      "url": "https://streaming.atlanticsunrisehosting.com/proxy/santa105/stream",
+      "imageUrl": "https://sunny105radio.com/wp-content/themes/sunny105/assets/santa-logo.png",
+      "description": "An online radio station playing Christmas songs and holiday favorites year-round.",
+      "website": "https://sunny105radio.com/santa-105/"
+    }
+  ]
+}
