@@ -1,11 +1,24 @@
 for (const frame of document.querySelectorAll("[data-video]")) {
   const launch = frame.querySelector(".video-launch");
   frame.addEventListener("stop-video", () => {
-    if (frame.querySelector("iframe")) frame.replaceChildren(launch);
+    const video = frame.querySelector("video");
+    video?.pause();
+    if (video || frame.querySelector("iframe")) frame.replaceChildren(launch);
   });
   launch.addEventListener("click", (event) => {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
+    if (frame.dataset.videoSrc) {
+      const player = document.createElement("video");
+      player.src = frame.dataset.videoSrc;
+      player.controls = true;
+      player.playsInline = true;
+      player.title = frame.dataset.videoTitle;
+      frame.replaceChildren(player);
+      player.focus();
+      player.play().catch(() => {});
+      return;
+    }
     const player = document.createElement("iframe");
     player.src = `https://www.youtube.com/embed/${encodeURIComponent(frame.dataset.video)}?autoplay=1&playsinline=1&rel=0`;
     player.title = frame.dataset.videoTitle;
