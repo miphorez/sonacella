@@ -27,7 +27,7 @@ Android app policy at `privacy.html`.
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
 - The independent `#station-collection` section presents collection promos in a
   manually controlled gallery with side arrows. Each `.promo-slide` supplies its
-  caption, destination and link label through data attributes. Switching slides
+  caption and watch destination through data attributes. Switching slides
   stops the outgoing player, updates the counter and link, and restores its cover.
   Add a slide and poster for each new collection. YouTube promos use `data-video`,
   while a locally hosted MP4 uses `data-video-src`. The approved Christmas MP4
