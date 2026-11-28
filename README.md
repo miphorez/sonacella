@@ -25,12 +25,13 @@ Android app policy at `privacy.html`.
   `data-carousel-slide` attribute.
 - Add new releases above older entries in the Releases section. Keep screenshots
   in `assets/releases/<version>/` so the main feature galleries can stay stable.
-- The independent `#station-collection` section after the feature carousel presents the approved
-  30-second "Pick a card. Find your sound." promo (`OEMSV_mZwo4`) and links to the
-  station collections and Instagram. Its local portrait poster
-  is extracted at 24.5 seconds from the approved final video. It shares the existing
-  click-to-play player and YouTube fallback; it is separate from release news and
-  the browser extension installation instructions.
+- The independent `#station-collection` section presents collection promos in a
+  manually controlled gallery with side arrows. Each `.promo-slide` supplies its
+  caption, destination and link label through data attributes. Switching slides
+  stops the outgoing player, updates the counter and link, and restores its cover.
+  Add a slide and poster for each new collection. YouTube promos use `data-video`,
+  while a locally hosted MP4 uses `data-video-src`. The approved Christmas MP4
+  includes the Azinity Music attribution shown below its caption.
 - The `#station-cards` menu link introduces clipboard import and points to
   `discover/`. The collections page shows one theme and one station at a time.
   Each card exposes a single-station catalog JSON and an optional QR for the

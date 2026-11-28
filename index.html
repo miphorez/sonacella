@@ -7,9 +7,9 @@
   <meta name="theme-color" content="#111a15">
   <title>Sonacella — Internet Radio &amp; MP3 Player for Android</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css?v=discover-entry">
-  <script src="gallery.js" defer></script>
-  <script src="video.js?v=release-carousel" defer></script>
+  <link rel="stylesheet" href="style.css?v=collection-videos">
+  <script src="gallery.js?v=collection-videos" defer></script>
+  <script src="video.js?v=collection-videos" defer></script>
   <script src="carousel.js?v=station-themes" defer></script>
 </head>
 <body>
@@ -274,15 +274,40 @@
         </div>
         <p class="requirements">Sonacella is an independent player. Stations and artwork belong to their respective providers. Stream availability and provider terms may vary.</p>
       </div>
-      <figure class="hero-video station-collection-video">
-        <div class="video-frame video-frame-portrait" data-video="OEMSV_mZwo4" data-video-title="Pick a card. Find your sound. | Sonacella">
-          <a class="video-launch" href="https://www.youtube.com/shorts/OEMSV_mZwo4" aria-label="Play the station collection video, 30 seconds">
-            <img src="assets/station-collection-poster.jpg" width="540" height="960" alt="Pick a card. Find your sound. A deck of Sonacella station cards with Smooth Jazz at the front." loading="lazy">
-            <span class="video-play" aria-hidden="true">&#9654;</span>
-            <span class="video-duration" aria-hidden="true">0:30</span>
-          </a>
+      <figure class="hero-video station-collection-video promo-gallery" data-gallery aria-label="Station collection videos">
+        <div class="promo-stage">
+          <button class="promo-step" type="button" data-step="-1" aria-label="Previous collection video" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+          </button>
+          <div class="promo-slides">
+            <div class="promo-slide is-current" data-caption="Classical, jazz and relax" data-watch-url="https://www.youtube.com/shorts/OEMSV_mZwo4" data-watch-label="Watch on YouTube">
+              <div class="video-frame video-frame-portrait" data-video="OEMSV_mZwo4" data-video-title="Pick a card. Find your sound. | Sonacella">
+                <a class="video-launch" href="https://www.youtube.com/shorts/OEMSV_mZwo4" aria-label="Play the classical, jazz and relax collection video, 30 seconds">
+                  <img src="assets/station-collection-poster.jpg" width="540" height="960" alt="A deck of Sonacella classical and jazz station cards" loading="lazy">
+                  <span class="video-play" aria-hidden="true">&#9654;</span>
+                  <span class="video-duration" aria-hidden="true">0:30</span>
+                </a>
+              </div>
+            </div>
+            <div class="promo-slide" data-caption="Christmas radio" data-show-credit data-watch-url="assets/christmas-collection.mp4" data-watch-label="Open video" inert>
+              <div class="video-frame video-frame-portrait" data-video data-video-src="assets/christmas-collection.mp4" data-video-title="Pick a card. Tune in to Christmas. | Sonacella">
+                <a class="video-launch" href="assets/christmas-collection.mp4" aria-label="Play the Christmas collection video, 30 seconds">
+                  <img src="assets/christmas-collection-poster.jpg" width="540" height="960" alt="Sonacella Christmas station cards with a decorated tree and presents" loading="lazy">
+                  <span class="video-play" aria-hidden="true">&#9654;</span>
+                  <span class="video-duration" aria-hidden="true">0:30</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="promo-step" type="button" data-step="1" aria-label="Next collection video" hidden>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#track-skip"/></svg>
+          </button>
         </div>
-        <figcaption>Classical. Jazz. Relax. <a href="https://www.youtube.com/shorts/OEMSV_mZwo4" target="_blank" rel="noopener">Watch on YouTube</a></figcaption>
+        <figcaption>
+          <span data-caption-live aria-live="polite">Classical, jazz and relax · 1/2</span>
+          <a data-watch-live href="https://www.youtube.com/shorts/OEMSV_mZwo4" target="_blank" rel="noopener">Watch on YouTube</a>
+        </figcaption>
+        <p class="promo-credit" data-credit-live hidden>Music <a href="https://www.youtube.com/watch?v=cctwJzBKAA0">Wish You a Swinging Christmas</a> by <a href="https://music.azinity.com/">Azinity Music</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Edited and mixed with sound effects.</p>
       </figure>
     </section>
 
