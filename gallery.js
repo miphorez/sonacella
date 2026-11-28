@@ -18,7 +18,6 @@ for (const gallery of document.querySelectorAll("[data-gallery]")) {
     if (credit) credit.hidden = !slides[current].hasAttribute("data-show-credit");
     if (watchLink) {
       watchLink.href = slides[current].dataset.watchUrl;
-      watchLink.textContent = slides[current].dataset.watchLabel;
     }
   }
 
