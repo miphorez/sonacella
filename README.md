@@ -30,8 +30,8 @@ Android app policy at `privacy.html`.
   caption and watch destination through data attributes. Switching slides
   stops the outgoing player, updates the counter and link, and restores its cover.
   Add a slide and poster for each new collection. YouTube promos use `data-video`,
-  while a locally hosted MP4 uses `data-video-src`. The approved Christmas MP4
-  includes the Azinity Music attribution shown below its caption.
+  while a locally hosted MP4 uses `data-video-src`. The Christmas promo shows the
+  Azinity Music attribution below its caption.
 - The `#station-cards` menu link introduces clipboard import and points to
   `discover/`. The collections page shows one theme and one station at a time.
   Each card exposes a single-station catalog JSON and an optional QR for the
