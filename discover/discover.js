@@ -6,22 +6,26 @@ function setQrExpanded(button, expanded) {
   document.getElementById(button.getAttribute("aria-controls")).hidden = !expanded;
 }
 
-async function copyStationCard(text, button, status) {
+async function copyStationText(text, button, status) {
   status.textContent = "";
+  const initiallyHidden = text.hidden;
   try {
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(text.value);
     } else {
+      text.hidden = false;
       text.focus();
       text.select();
       if (!document.execCommand("copy")) throw new Error("Clipboard unavailable");
       button.focus();
+      text.hidden = initiallyHidden;
     }
     status.textContent = "Copied. In Sonacella, choose Add stations → From clipboard.";
   } catch {
+    text.hidden = false;
     text.focus();
     text.select();
-    status.textContent = "Copy the selected card text using your browser’s copy command.";
+    status.textContent = "Copy the selected text using your browser’s copy command.";
   }
 }
 
@@ -104,7 +108,7 @@ for (const card of document.querySelectorAll(".discovery-card")) {
   const text = card.querySelector("textarea");
   const status = card.querySelector(".station-copy-status");
   renderStationPreview(card, text.value);
-  copy.addEventListener("click", () => copyStationCard(text, copy, status));
+  copy.addEventListener("click", () => copyStationText(text, copy, status));
   qr.addEventListener("click", () => {
     const expand = expandedQr !== qr;
     if (expandedQr) setQrExpanded(expandedQr, false);
@@ -113,4 +117,16 @@ for (const card of document.querySelectorAll(".discovery-card")) {
   });
   copy.hidden = false;
   qr.hidden = false;
+}
+
+for (const theme of document.querySelectorAll(".station-theme")) {
+  const copy = theme.querySelector("[data-copy-collection]");
+  const text = theme.querySelector("textarea");
+  const status = theme.querySelector(".station-copy-status");
+  const shelf = document.getElementById(theme.dataset.carouselTarget);
+  const stations = Array.from(shelf.querySelectorAll(".discovery-card textarea"),
+    card => JSON.parse(card.value).stations[0]);
+  text.value = JSON.stringify({ version: 1, stations }, null, 2);
+  copy.addEventListener("click", () => copyStationText(text, copy, status));
+  copy.hidden = false;
 }

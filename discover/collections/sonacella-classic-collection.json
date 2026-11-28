@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "stations": [
+    {
+      "name": "Best of Wolfgang Amadeus Mozart",
+      "url": "https://stream.klassikradio.de/mozart/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/mozart-920x920pxjpg-6a5e0a23ec2ec933874090.jpg",
+      "description": "A Klassik Radio channel dedicated to the music of Wolfgang Amadeus Mozart.",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/wolfgang-amadeus-mozart/"
+    },
+    {
+      "name": "Best of Barock",
+      "url": "https://stream.klassikradio.de/barock/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/krs-bestofbarock-920-67a9cff97b8cc195264752.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/barock-musik/"
+    },
+    {
+      "name": "Best of Johann Sebastian Bach",
+      "url": "https://stream.klassikradio.de/purebach/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/bach-920x920px-6a5e0955c658e795390518.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/johann-sebastian-bach/"
+    },
+    {
+      "name": "Klavier Solo",
+      "url": "https://stream.klassikradio.de/piano/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/klavier-solo-920-67bedf7c4e9d6166093912.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/piano-musik/"
+    },
+    {
+      "name": "New Classics",
+      "url": "https://stream.klassikradio.de/newclassics/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/new-classics-920-65d3052076d7f819461254.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/neoklassik/"
+    },
+    {
+      "name": "Klassik Dreams",
+      "url": "https://stream.klassikradio.de/dreams/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/klassik-dreams-920-6746f46c41162682057086.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/klassische-musik-streamen/klassik-dreams/"
+    },
+    {
+      "name": "Smooth Jazz",
+      "url": "https://stream.klassikradio.de/smooth/aac-128/select/",
+      "imageUrl": "https://krs3.fra1.cdn.digitaloceanspaces.com/images/stations/krs-smoothjazz-920-6ae32b046f337139408433.jpg",
+      "website": "https://www.klassikradio.de/klassik-radio-plus/jazz-musik-hoeren/smooth-jazz/"
+    },
+    {
+      "name": "CLASSIC RADIO NON STOP",
+      "url": "https://smeuh.org:8443/classicradiononstop.mp3",
+      "imageUrl": "https://classicradiononstop.fr/_media/img/small/neutral-minimalist-modern-classical-music-youtube-video.png",
+      "description": "Ancient, baroque, classical, romantic and contemporary music.",
+      "website": "https://classicradiononstop.fr/stream-classical-music-at-anytime-and-anywhere-classic-radio-non-stop.html"
+    }
+  ]
+}
