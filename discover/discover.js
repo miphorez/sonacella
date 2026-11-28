@@ -6,8 +6,7 @@ function setQrExpanded(button, expanded) {
   document.getElementById(button.getAttribute("aria-controls")).hidden = !expanded;
 }
 
-async function copyStationText(text, button, status) {
-  status.textContent = "";
+async function copyStationText(text, button, status, copiedMessage) {
   const initiallyHidden = text.hidden;
   try {
     if (navigator.clipboard?.writeText) {
@@ -20,7 +19,7 @@ async function copyStationText(text, button, status) {
       button.focus();
       text.hidden = initiallyHidden;
     }
-    status.textContent = "Copied. In Sonacella, choose Add stations → From clipboard.";
+    status.textContent = copiedMessage;
   } catch {
     text.hidden = false;
     text.focus();
@@ -108,7 +107,7 @@ for (const card of document.querySelectorAll(".discovery-card")) {
   const text = card.querySelector("textarea");
   const status = card.querySelector(".station-copy-status");
   renderStationPreview(card, text.value);
-  copy.addEventListener("click", () => copyStationText(text, copy, status));
+  copy.addEventListener("click", () => copyStationText(text, copy, status, "Copied. In Sonacella, choose Add stations → From clipboard."));
   qr.addEventListener("click", () => {
     const expand = expandedQr !== qr;
     if (expandedQr) setQrExpanded(expandedQr, false);
@@ -127,6 +126,6 @@ for (const theme of document.querySelectorAll(".station-theme")) {
   const stations = Array.from(shelf.querySelectorAll(".discovery-card textarea"),
     card => JSON.parse(card.value).stations[0]);
   text.value = JSON.stringify({ version: 1, stations }, null, 2);
-  copy.addEventListener("click", () => copyStationText(text, copy, status));
+  copy.addEventListener("click", () => copyStationText(text, copy, status, "Copied. Use From clipboard."));
   copy.hidden = false;
 }

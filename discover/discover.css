@@ -32,6 +32,9 @@
 }
 .station-themes { margin-top: 32px; }
 .station-themes h2 { margin: 0 0 14px; font-size: 22px; }
+.station-themes.carousel .station-theme-slides { display: grid; }
+.station-themes.carousel .station-theme { grid-area: 1 / 1; }
+.station-themes.carousel .station-theme[hidden] { display: block; visibility: hidden; }
 .station-theme {
   padding: 16px 20px;
   border: 1px solid var(--line);
